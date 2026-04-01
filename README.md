@@ -28,6 +28,10 @@ Scripts utiles:
 - `scripts/pipeline/push_artifacts_to_drive.sh`
 - `scripts/pipeline/pull_artifacts_from_drive.sh`
 
+Notebooks:
+- `notebooks/colab_full_train_from_drive.ipynb`
+- `notebooks/colab_full_train_from_github.ipynb`
+
 ## Démarrage Colab
 ```bash
 pip install -r requirements.txt
