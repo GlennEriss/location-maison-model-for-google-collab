@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-20T05:02:27.424Z",
+  "jobId": "job_format_run_20260320045635_all",
+  "modelJobId": "scrap-format-all-20260320045635-p01",
+  "modelRecordSource": "accepted",
+  "source": {
+    "rawPostId": "raw_fb_795e73a91e3c2482",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_795e73a91e3c2482.json",
+    "sourcePlatform": "facebook",
+    "sourcePostUrl": "https://www.facebook.com/stephanas.osenimes/posts/pfbid0jxvmQPZoq9eMRHPKdREFM5Yhxnroc25nR4EvqYNjE1YJbhqc5C8kHNNXU85usSq8l",
+    "sourcePostId": null,
+    "sourceAuthorName": "Onésime Négoce",
+    "sourcePublishedAt": null,
+    "advertiser_uuid": "0tmnIUbOdaa0MP1JIqCryOb7rYG2",
+    "advertiser_email": "onesimenegoce@ttn.com",
+    "scrapedAt": "2026-03-20T04:56:17.460Z",
+    "hashSignature": "sha256:0a21d79e228016016afa9830a701180b2bcb7282f37dd5552050397ad1111955"
+  },
+  "annonce": {
+    "typeProperty": "Room",
+    "title": "Chambre à louer à Pédiatrie",
+    "description": "Chambre américaine située à Owendo, adaptée à une occupation individuelle",
+    "area": 0,
+    "price": 140000,
+    "tags": [
+      "Agence",
+      "Meublé",
+      "Parking"
+    ],
+    "status": "FOR_RENT",
+    "street": "Pédiatrie",
+    "city": "Owendo",
+    "province": "Estuaire",
+    "longitude": 9.5009,
+    "latitude": 0.3239,
+    "country": "Gabon",
+    "countryCode": "GA",
+    "images": [
+      {
+        "filePATH": "raw/raw_fb_795e73a91e3c2482/01.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/617052478_2035634680720170_3267229254846494135_n.jpg?stp=dst-jpg_p960x960_tt6&_nc_cat=108&ccb=1-7&_nc_sid=7b2446&_nc_ohc=TxZfmFGWhPsQ7kNvwFIV4YR&_nc_oc=AdpM-EHwZJEq-1-JsZD1qX8QQPFbnR-QGs4nEGKt9uxMS40fFkPX0EnsSXIFb-QkwbQ&_nc_zt=23&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=4zbRzbSCqNgIqfQ_Pv7f4w&_nc_ss=7a30f&oh=00_Afx58oqLHyi1QkyaH-Htr1tk5j_oSGnwGHSFOX-IhRbkYw&oe=69C2B0B2"
+      },
+      {
+        "filePATH": "raw/raw_fb_795e73a91e3c2482/02.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/619323440_2035634797386825_3656026528912293263_n.jpg?stp=dst-jpg_p960x960_tt6&_nc_cat=100&ccb=1-7&_nc_sid=7b2446&_nc_ohc=p_EeeQmZ1xUQ7kNvwFRlshR&_nc_oc=AdpnqeFsHlBUVUg_Ebt-Pa2CzX9NfsVQ2LCVj5kS5dymq7uEf8jrUec7Ppwl37iKR1U&_nc_zt=23&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=4zbRzbSCqNgIqfQ_Pv7f4w&_nc_ss=7a30f&oh=00_AfyIJ1BESDf-exy9vfZ07C1g2KcbPfZYmub_ZKgT-MQNQw&oe=69C2CE42"
+      },
+      {
+        "filePATH": "raw/raw_fb_795e73a91e3c2482/03.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/617822846_2035635180720120_7319527337962181579_n.jpg?stp=dst-jpg_p960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=pHPia9YcD7oQ7kNvwGc9yAC&_nc_oc=AdoABcFwBBVXQ3Bd09rDG7Ef7gmIr8JuHSW6gjL9Xe4gDd2ZiVeOqfA0QnJ8RRNrhAU&_nc_zt=23&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=4zbRzbSCqNgIqfQ_Pv7f4w&_nc_ss=7a30f&oh=00_Afz2sxjCY-7ojVK2Z-61iMWMrE-QGNh2NXsx5A86QpsIFQ&oe=69C2CF82"
+      },
+      {
+        "filePATH": "raw/raw_fb_795e73a91e3c2482/04.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/616455426_2035635287386776_1910807548553954366_n.jpg?stp=dst-jpg_p960x960_tt6&_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=FvL3hDylcG0Q7kNvwH3QsBB&_nc_oc=Adoiz6horFmCq7MVGLANxRMP3orTkHxgSgEL6RUpLyH031qI91dJognIs9SGaT_QkC4&_nc_zt=23&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=4zbRzbSCqNgIqfQ_Pv7f4w&_nc_ss=7a30f&oh=00_AfyjCUaXf2yXi0PL316syGpBLvQ2ZZOW6L7GWwb2q1tjhw&oe=69C2C174"
+      }
+    ],
+    "nbrRooms": 1,
+    "nbrBathrooms": 1,
+    "nbrKitchens": 1,
+    "sourceId": "raw_fb_795e73a91e3c2482",
+    "sourceText": "LOCATION D'UNE MAGNIFIQUE CHAMBRE AMÉRICAINE 1ÈRE MAIN DERRIÈRE LA PÉDIATRIE EN ACCÈS FACIL SÉCURISÉE CLÔTURÉEE\nTELS: 074801717/066176767\nVISITE: 5000F\nPRIX: 140000F\nPAYEMENT EXIGÉ CAUTION LOYER ET FRAIS D'AGENCE IMMOBILIÈRE\n#CARACTERISTIQUES \n1 CHAMBRE\n1 PETITE CUISINE\n1 DOUCHE WC\n1 ESPACE PARKING\nNB: PAS PLUS DE 3 PERSONNES ET IDÉALEMENT POUR JEUNE COUPLE"
+  },
+  "imageCountLinked": 4,
+  "modelRejectReason": null,
+  "imageLinking": {
+    "linkedAt": "2026-03-20T06:11:40.588Z",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_795e73a91e3c2482.json",
+    "totalRawImages": 4,
+    "successRawImages": 4,
+    "linkedCount": 4
+  }
+}

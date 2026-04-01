@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-20T07:02:14.932Z",
+  "jobId": "job_format_run_20260320070142_all",
+  "modelJobId": "scrap-format-all-20260320070142-p01",
+  "modelRecordSource": "accepted",
+  "source": {
+    "rawPostId": "raw_fb_2c269230490b3b17",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_2c269230490b3b17.json",
+    "sourcePlatform": "facebook",
+    "sourcePostUrl": "https://www.facebook.com/stephanas.osenimes/posts/pfbid037MZ4bUTQgF3BMUzfq6JKwdSPbGMuVG2cE51At554Tb2YEAJvffR4MV1qWWbE4zeCl",
+    "sourcePostId": null,
+    "sourceAuthorName": "Onésime Négoce",
+    "sourcePublishedAt": null,
+    "advertiser_uuid": "0tmnIUbOdaa0MP1JIqCryOb7rYG2",
+    "advertiser_email": "onesimenegoce@ttn.com",
+    "scrapedAt": "2026-03-20T07:01:42.722Z",
+    "hashSignature": "sha256:4681e06a0b5d6e193cf2d6b3713583f7aa0bfa7386820868251c08a07be0b858"
+  },
+  "annonce": {
+    "typeProperty": "Studio",
+    "title": "Studio à louer à Owendo",
+    "description": "Studio fonctionnel situé à Owendo, avec placard, salle d'eau, cuisine",
+    "price": 250000,
+    "area": 0,
+    "status": "FOR_RENT",
+    "tags": [
+      "Agence",
+      "Sécurisé",
+      "Parking"
+    ],
+    "street": "",
+    "city": "",
+    "province": "",
+    "longitude": 11.446591688888892,
+    "latitude": -0.7645098777777779,
+    "country": "Gabon",
+    "countryCode": "GA",
+    "images": [],
+    "nbrRooms": 1,
+    "nbrKitchens": 1,
+    "nbrBathrooms": 1,
+    "nbrToilets": 1,
+    "sourceId": "raw_fb_2c269230490b3b17",
+    "sourceText": "LOCATION D'UN STUDIO/APPARTEMENT 2 CHAMBRED SEUL DANS SA CLÔTURE À OWENDO EN ACCÈS FACIL DANS LA CITÉ SÉCURISÉ \n■ TELS: 074801717/066176767\n■ DÉPLACEMENT: 5000F\n■ PRIX: 250000F \n■ MODALITÉS: \nLOYER+CAUTION+FRAIS D'AGENCE \n■ #CARACTÉRISTIQUES \n■ 1 CHAMBRE AVEC PLACARDS\n■ 1 DOUCHE WC\n■ 1 SALON\n■ 1 CUISINE \n■ 1 POSE MACHINE \n■ 1 BALLON D'EAU CHAUDE \n■ 1 LAVABO\n■ 1 ESPACE PARKING POUR 1 VÉHICULE \n■ 1 INDÉPENDANCE À L'ARRIÈRE \n■ NB: CLIENT INTÉRESSÉ APPELLE \n●●● #NOTRE PRIORITÉ, BIEN VOUS LOGER●●●"
+  },
+  "imageCountLinked": 0,
+  "modelRejectReason": null,
+  "imageLinking": {
+    "linkedAt": "2026-03-20T07:02:14.932Z",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_2c269230490b3b17.json",
+    "totalRawImages": 0,
+    "successRawImages": 0,
+    "linkedCount": 0
+  }
+}

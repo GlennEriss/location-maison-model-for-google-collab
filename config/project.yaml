@@ -1,0 +1,83 @@
+project:
+  name: location-maison-model-for-google-collab
+  environment: local
+  seed: 42
+paths:
+  raw_data_dir: data/raw
+  interim_data_dir: data/interim
+  processed_data_dir: data/processed
+  dataset_dir: data/datasets
+  log_dir: logs
+  app_log_dir: logs/app
+  train_log_dir: logs/train
+  error_log_dir: logs/error
+  checkpoint_dir: outputs/checkpoints
+  metrics_dir: outputs/metrics
+  report_dir: outputs/reports
+dataset:
+  initial_target_size: 20000
+  output_filename: real_social_dataset_20k.jsonl
+  source_annonce_dir: data/source_annonces
+  source_properties_dir: data/source_properties
+  source_posts_dir: data/post-for-facebook
+  processed_relevance_dir: data/processed/relevance
+  split:
+    train: 0.8
+    validation: 0.1
+    test: 0.1
+  composition:
+    standard_cases_ratio: 0.55
+    hard_cases_ratio: 0.45
+  diversity_targets:
+    min_property_types: 8
+    min_tag_coverage_ratio: 0.7
+    include_noisy_spelling: true
+    include_short_ads: true
+    include_long_ads: true
+    include_missing_fields: true
+model:
+  base_model: Qwen/Qwen2.5-3B-Instruct
+  tokenizer_max_length: 1024
+  quantization: 4bit
+  trust_remote_code: false
+training:
+  enabled: true
+  strategy: lora
+  task_type: causal_lm
+  epochs: 3
+  batch_size: 4
+  gradient_accumulation_steps: 8
+  learning_rate: 0.00015
+  warmup_ratio: 0.03
+  weight_decay: 0.01
+  logging_steps: 25
+  eval_steps: 250
+  save_steps: 250
+  save_total_limit: 3
+  max_seq_length: 1024
+  mixed_precision: fp16
+lora:
+  r: 32
+  alpha: 64
+  dropout: 0.05
+  target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+  - gate_proj
+  - up_proj
+  - down_proj
+logging:
+  level: INFO
+  console: true
+  json_logs: true
+  metrics_file: outputs/metrics/latest_metrics.json
+  error_file: error/errors.log
+  app_file: app/application.log
+  train_file: train/train.log
+runtime:
+  device_preference: cuda
+  allow_cpu_fallback: true
+  num_workers: 8
+  fail_fast: true

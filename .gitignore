@@ -1,0 +1,29 @@
+.DS_Store
+.pycache_local/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.env
+.env.*
+.venv/
+venv/
+
+# Logs
+logs/
+
+# Training outputs and artifacts
+outputs/
+
+# Generated datasets
+data/datasets/
+data/smoke_datasets/
+data/processed/
+
+# Local caches
+.cache/
+
+# OS / editor
+.idea/
+.vscode/

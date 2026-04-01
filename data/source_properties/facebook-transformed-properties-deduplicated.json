@@ -1,0 +1,134 @@
+[
+  {
+    "typeProperty": "Apartment",
+    "title": "Appartement 3 chambres à Kalamu",
+    "description": "Appartement composé de 3 chambres, salon, salle à manger, cuisine équipée et 2 salles de bain à Kalamu.",
+    "price": 400,
+    "status": "FOR_RENT",
+    "contact": "0823 271 073",
+    "street": "Commune de Kalamu",
+    "city": "Libreville",
+    "province": "Estuaire",
+    "country": "Gabon",
+    "countryCode": "GA",
+    "longitude": 9.4534,
+    "latitude": 0.3933,
+    "area": 150,
+    "images": [
+      "https://scontent.fbgw61-2.fna.fbcdn.net/v/t39.30808-6/536253017_122178609446373047_4212834344905794596_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=F7vNNYOKJ4oQ7kNvwE6OvEm&_nc_oc=Adlq4bXNMEO9BM1unDbP8NEfQAH64jZO6YoaxC_09ws_mGd3gVdmdZsrubYt2QbG5gU&_nc_zt=23&_nc_ht=scontent.fbgw61-2.fna&_nc_gid=wiun1AfC7kXYKnwpGhLSWQ&oh=00_AfXvBGqDzJl8TiYRhJQ8Nvh7zApEiQ58CgMGra8NKBfF2Q&oe=68ABE6E1",
+      "https://scontent.fbgw61-2.fna.fbcdn.net/v/t39.30808-6/536269462_122178609488373047_7309396554340167043_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=aBWS0XZORrEQ7kNvwFqKs-J&_nc_oc=AdlLQMPbUhRNRZ8TEwFT5qHvrC8_aQNiOgF-J2f8VEhJvKOa1BsJ7DydtzSaGyzhQN0&_nc_zt=23&_nc_ht=scontent.fbgw61-2.fna&_nc_gid=wiun1AfC7kXYKnwpGhLSWQ&oh=00_AfVxGSXynXCN_6d80x0XBLrvQB6LfaDOT59sFDTul1JdYw&oe=68AC08BC",
+      "https://scontent.fbgw61-2.fna.fbcdn.net/v/t39.30808-6/536277568_122178609548373047_8568371297625512065_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=r3fP-w_GnFsQ7kNvwFT2Ma_&_nc_oc=AdmZq-tw5Twpy8-qOUi427DVZrzO-gcVLXG0rhuHCy-4aZS-9d1xyLXYC3Tyu8_bIEE&_nc_zt=23&_nc_ht=scontent.fbgw61-2.fna&_nc_gid=wiun1AfC7kXYKnwpGhLSWQ&oh=00_AfWgYHkq2PsTWUjy_TIJjapjILJoRLefI4IJSoFqKWRKVw&oe=68AC06F3",
+      "https://scontent.fbgw61-3.fna.fbcdn.net/v/t39.30808-6/536284764_122178609590373047_2185519647542296877_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Ihq_7DmLTeUQ7kNvwF5RtTu&_nc_oc=AdlMnZMijDnP-ScZn4PeYwApIp6Kzq9yNDUrF5SRPdRRId44FmUcG1ru_F34hhQoWi8&_nc_zt=23&_nc_ht=scontent.fbgw61-3.fna&_nc_gid=wiun1AfC7kXYKnwpGhLSWQ&oh=00_AfU9Kh2gghGSeroFfnCOuH8BC51W7FyyrbGFxDYhuTnkXA&oe=68ABFBD8",
+      "https://scontent.fbgw61-3.fna.fbcdn.net/v/t39.30808-6/536285489_122178609638373047_6431545569294780261_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=-kgMIb9acWkQ7kNvwF9M32x&_nc_oc=AdmNuM6mA1cOsRGU8FYvE3VOMMfl_hVSrLDZQNeUEEGGWas45BZ7gtNDqu31jn1Hl7M&_nc_zt=23&_nc_ht=scontent.fbgw61-3.fna&_nc_gid=wiun1AfC7kXYKnwpGhLSWQ&oh=00_AfXojNaO_y5ivVULHWCO_QBsIlSrbAAQeLbCBc37Tdmhcg&oe=68AC0394"
+    ],
+    "tags": [
+      "Famille",
+      "Centre-ville",
+      "Commerces proches",
+      "Transport proche",
+      "Parking",
+      "Sécurisé"
+    ],
+    "nbrRooms": 3,
+    "nbrChickens": 0,
+    "nbrBathrooms": 2,
+    "nbrToilets": 2
+  },
+  {
+    "typeProperty": "Home",
+    "title": "Maison 4 chambres à louer à Barumbu",
+    "description": "Maison avec 4 chambres, double salon, salle à manger, cuisine équipée, dépôt, 3 salles de bains et véranda.",
+    "price": 6000,
+    "status": "FOR_RENT",
+    "contact": "0823 271 073",
+    "street": "Macadam",
+    "city": "Libreville",
+    "province": "Estuaire",
+    "country": "Gabon",
+    "countryCode": "GA",
+    "longitude": 9.4531,
+    "latitude": 0.3843,
+    "area": 200,
+    "images": [
+      "https://scontent.fbgw61-3.fna.fbcdn.net/v/t39.30808-6/534914709_122178467978373047_600210733399796327_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=9zR81KUWxy0Q7kNvwEU2Axa&_nc_oc=Adl4xtBimHFIIWUA0jEidqcxHs52NKFqVRLXPEYC2CWt8YK0TG6JuGwa6W6szl6Iir4&_nc_zt=23&_nc_ht=scontent.fbgw61-3.fna&_nc_gid=s7BmuTbRP92HCGnsSbnnHg&oh=00_AfUaWLkRaZG1nNNLqMsY9Qz0lgMov3TD2v3BXMRqVCOBYQ&oe=68ABDF6C",
+      "https://scontent.fbgw61-3.fna.fbcdn.net/v/t39.30808-6/536267066_122178468032373047_2812694256169775914_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Kz3rNNE6-xMQ7kNvwFdWpYy&_nc_oc=Adn22gaBrF6VMGd_FrBDGUu8AXefba6t_8TPrC3mRh4nFg7prlZYP3I0NykaAkxaxyE&_nc_zt=23&_nc_ht=scontent.fbgw61-3.fna&_nc_gid=s7BmuTbRP92HCGnsSbnnHg&oh=00_AfUrFmJ6y6pw9tvnDMYUWhcbRChzEt_qzWW-cqUSnGgVBA&oe=68ABFD8B",
+      "https://scontent.fbgw61-3.fna.fbcdn.net/v/t39.30808-6/536285110_122178468086373047_6399177824984463415_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=zzjEs1Kk8QsQ7kNvwFF6OOj&_nc_oc=AdmXzrmJAKledK8rb_cgV7NyTTsrfVEVet4YeFRnM0gdbdrQJHHbCj4srtiDJCzkfsE&_nc_zt=23&_nc_ht=scontent.fbgw61-3.fna&_nc_gid=s7BmuTbRP92HCGnsSbnnHg&oh=00_AfW60rZHOZL__nDBpLOlQ8ReN9jk1ZwgGNeAKNdvZU1M7A&oe=68ABD4BB"
+    ],
+    "tags": [
+      "Famille",
+      "Travail",
+      "Sécurisé",
+      "Parking",
+      "Commerces proches"
+    ],
+    "nbrRooms": 4,
+    "nbrChickens": 0,
+    "nbrBathrooms": 3,
+    "nbrToilets": 3
+  },
+  {
+    "typeProperty": "Apartment",
+    "title": "Appartement luxueux 3 chambres à Libreville",
+    "description": "Appartement climatisé avec 3 chambres, salon, salle à manger et cuisine équipée à Libreville",
+    "price": 600,
+    "status": "FOR_RENT",
+    "contact": "0823 271 073",
+    "street": "Boulevard",
+    "city": "Libreville",
+    "province": "Estuaire",
+    "country": "Gabon",
+    "countryCode": "GA",
+    "longitude": 9.4514,
+    "latitude": 0.3889,
+    "area": 200,
+    "images": [
+      "https://scontent.fbgw61-3.fna.fbcdn.net/v/t39.30808-6/536269686_122178289208373047_2560408319540146914_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=sx0z1_Gk4noQ7kNvwHa463t&_nc_oc=AdktpFnwUF-RQ6DZhtO769WrlqaUCu9PXIKHe0pnYdwhB6_vCME0DOe4FURDPf6z6og&_nc_zt=23&_nc_ht=scontent.fbgw61-3.fna&_nc_gid=OkTGOzQ2-4O2AOby5mgdYA&oh=00_AfWnjQq66eYiODWELwnkY6Hf_14dMPFMbLD4LDl3hqwXew&oe=68ABDA87",
+      "https://scontent.fbgw61-3.fna.fbcdn.net/v/t39.30808-6/536278684_122178289250373047_8630015406610041132_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=QoKHR3BBslkQ7kNvwFLQWvb&_nc_oc=Adkg_FFx2plRyJpUtQMpF76FWzrg9WFW9IBdJepYN2QP0fKBignnZ3oQwETJuAKWFeU&_nc_zt=23&_nc_ht=scontent.fbgw61-3.fna&_nc_gid=OkTGOzQ2-4O2AOby5mgdYA&oh=00_AfXWShf8C1JRFSxgPW0riHOg4kcrdcbOd0jnapj4FjE85A&oe=68ABF8B3",
+      "https://scontent.fbgw61-3.fna.fbcdn.net/v/t39.30808-6/534583203_122178289292373047_1949903098222565911_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=sBNbq841FB4Q7kNvwEeyJ-d&_nc_oc=AdmxL_ApMw20P3aKAB15mci1y2Dn4FzJqFYpb3P-ShFDnD0Bv8lfeNTJiR3BNxZPWxQ&_nc_zt=23&_nc_ht=scontent.fbgw61-3.fna&_nc_gid=OkTGOzQ2-4O2AOby5mgdYA&oh=00_AfVIYFfP8NDYLJDey935faZGb04jf2spitMWOzvCCvlTPg&oe=68AC02FE",
+      "https://scontent.fbgw61-2.fna.fbcdn.net/v/t39.30808-6/534855920_122178289340373047_7386758380400720155_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=4CifIAacYrwQ7kNvwHqPRUG&_nc_oc=AdmNJKpo3HIic9VVog67dYdqBXxymwS-2Bkp761Bgcty_D2hV64LgSbKOqyEPHkL278&_nc_zt=23&_nc_ht=scontent.fbgw61-2.fna&_nc_gid=OkTGOzQ2-4O2AOby5mgdYA&oh=00_AfWbipeUeFAvjv-gtPSJjws2PhRf4-IhMO9EHmUBhPrBlw&oe=68ABDFD6",
+      "https://scontent.fbgw61-3.fna.fbcdn.net/v/t39.30808-6/536275748_122178289388373047_1710811379633449165_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=3Or-0pRSuJwQ7kNvwGE9lDA&_nc_oc=AdnxRgjIqWQISG7NwKjGf_T6oEuwXGJ0jV4eW1f4p33GKxZFfqnQn4rQFuYikDmDTGQ&_nc_zt=23&_nc_ht=scontent.fbgw61-3.fna&_nc_gid=OkTGOzQ2-4O2AOby5mgdYA&oh=00_AfXGDIe1oHqBuwoXs1wVp4MOd9ECg0Q67CaZb6lvH-O6xQ&oe=68ABDCFF"
+    ],
+    "tags": [
+      "Luxueux",
+      "Centre-ville",
+      "Climatisé",
+      "Parking",
+      "Commerces proches"
+    ],
+    "nbrRooms": 3,
+    "nbrChickens": 0,
+    "nbrBathrooms": 2,
+    "nbrToilets": 2
+  },
+  {
+    "typeProperty": "Shop",
+    "title": "Bijoux en or à Libreville",
+    "description": "Bagues de fiançailles en plaqué or à vendre à Libreville",
+    "price": 10000,
+    "status": "FOR_SALE",
+    "contact": "+24104711677",
+    "street": "",
+    "city": "Libreville",
+    "province": "",
+    "country": "Gabon",
+    "countryCode": "GA",
+    "longitude": 0,
+    "latitude": 0,
+    "area": 0,
+    "images": [
+      "https://scontent.fbgw61-3.fna.fbcdn.net/v/t39.30808-6/531070620_122223015560133785_7130744476247605493_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=dMrNJzTfAskQ7kNvwGk7K5U&_nc_oc=AdkBNU1ikvzfLNwGqHPuzgpukcN_lLIC-ETcYAqQkKKWoILJIrL1nOzC6S9sIdAr4pY&_nc_zt=23&_nc_ht=scontent.fbgw61-3.fna&_nc_gid=0pgvlY1m0xS0G48wXZE62A&oh=00_AfVhxq3dHn8mg3Z8F9prYeua2sb7gAuGyA0BZFm3f_wFlg&oe=68ABD702",
+      "https://scontent.fbgw61-2.fna.fbcdn.net/v/t39.30808-6/531915943_122223015500133785_3514234391194266784_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=Z9DLcOwS5tYQ7kNvwHZnbwb&_nc_oc=Adk4Z1sfiIJHdpvV0lCAqYjFbJigZBX73JFh1lYcYmZE1OaZRXOgwIRH2SH7xFqJid0&_nc_zt=23&_nc_ht=scontent.fbgw61-2.fna&_nc_gid=0pgvlY1m0xS0G48wXZE62A&oh=00_AfXbt0L9bVZDdzzjDqo4W6CMuLlkIQW5Y8M6pvTzza4ofg&oe=68ABE8E7",
+      "https://scontent.fbgw61-2.fna.fbcdn.net/v/t39.30808-6/531043529_122223015464133785_7310490558667099918_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=-NNPr-AlE74Q7kNvwGnwtOR&_nc_oc=AdmY6-VKcuTWR15JGU4KioASCSgb8-guLd3r56WhowmHrwqzLHZwQMj2jN2oFSoxqTU&_nc_zt=23&_nc_ht=scontent.fbgw61-2.fna&_nc_gid=0pgvlY1m0xS0G48wXZE62A&oh=00_AfV-gy4T-d_R3O_gU0BYBW9RG-UlH3bYZ5sjf8oE3v7RoQ&oe=68ABD4B5",
+      "https://scontent.fbgw61-3.fna.fbcdn.net/v/t39.30808-6/531861379_122223015416133785_2499036461512536404_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=S1LX4EkmCnAQ7kNvwE-vgNh&_nc_oc=Admob_bW59J79WT_s2h7SfVn41hwubPyBOVLgyIJznsEeHBgRzvOCOYJmf_WMDTiJlI&_nc_zt=23&_nc_ht=scontent.fbgw61-3.fna&_nc_gid=0pgvlY1m0xS0G48wXZE62A&oh=00_AfUtGJiMLFHExNWaknjENWtIIUqLZ_6e_iA12Kse_lx-CQ&oe=68ABE537",
+      "https://scontent.fbgw61-2.fna.fbcdn.net/v/t39.30808-6/531447541_122223015458133785_6319876423395212162_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=d-FrQh0RV2AQ7kNvwGRtIYa&_nc_oc=AdnNxA8UE4fMndSVIpkFN_8Pa7j9inF55Rs6zi4UHWallbHHtwLxwsIOCQ9PBmldXWI&_nc_zt=23&_nc_ht=scontent.fbgw61-2.fna&_nc_gid=0pgvlY1m0xS0G48wXZE62A&oh=00_AfU4ARr2qcR9YNkQ2m2_JQp_QG52i-G5OV2HBCi32ztfgA&oe=68ABD90C"
+    ],
+    "tags": [
+      "Commerces proches",
+      "Centre-ville"
+    ],
+    "nbrRooms": 0,
+    "nbrChickens": 0,
+    "nbrBathrooms": 0,
+    "nbrToilets": 0
+  }
+]

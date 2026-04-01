@@ -1,0 +1,147 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-20T13:14:33.002Z",
+  "jobId": "job_format_run_20260320131407_all",
+  "modelJobId": "scrap-format-all-20260320131407-p01",
+  "modelRecordSource": "accepted",
+  "source": {
+    "rawPostId": "raw_fb_dc2d50391180f6a8",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_dc2d50391180f6a8.json",
+    "sourcePlatform": "facebook",
+    "sourcePostUrl": "https://www.facebook.com/permalink.php?story_fbid=pfbid02nKYoFwUodWo5MtYKVyWqktRMSoCpwDEqVSpwCYFXHdhTXR1BkXCV1XG4jD9dU2Qsl&id=100063924376821",
+    "sourcePostId": "pfbid02nKYoFwUodWo5MtYKVyWqktRMSoCpwDEqVSpwCYFXHdhTXR1BkXCV1XG4jD9dU2Qsl",
+    "sourceAuthorName": "Jika immo",
+    "sourcePublishedAt": null,
+    "advertiser_uuid": "rO9AwHrh1aT9S6mbkFsQWKtNJqz2",
+    "advertiser_email": "ikaimmo@ttn.ga",
+    "scrapedAt": "2026-03-20T13:14:07.026Z",
+    "hashSignature": "sha256:c107c61090b0890e2e5c19a565b6f5641b545cbe7425991a7b274e752c3ba192"
+  },
+  "annonce": {
+    "typeProperty": "Apartment",
+    "title": "Appartement 2 chambres à Akanda-Marseille 2",
+    "description": "Appartement de 2 chambres situé à Akanda-Marseille 2, avec séjour, cuisine, sanitaires",
+    "price": 350000,
+    "area": 0,
+    "status": "FOR_RENT",
+    "tags": [
+      "Agence",
+      "Parking",
+      "Balcon",
+      "Sous barrière",
+      "Sécurisé"
+    ],
+    "street": "Marseille 2",
+    "city": "Akanda",
+    "province": "Estuaire",
+    "longitude": 9.3226158,
+    "latitude": 0.6112932,
+    "country": "Gabon",
+    "countryCode": "GA",
+    "images": [
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/01.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/654553463_1434278055379660_7206249821964835845_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=zXMZSrJCmL8Q7kNvwHZpAtq&_nc_oc=AdonSJtPhTfGqKFzAlz6_MRjs0Ua1N1DK30anSakmhJOfXIF1MNEha5GbLnYb81j-Xk&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=4M4ZybApUXmHqC2pjEj9Iw&_nc_ss=7a30f&oh=00_AfzCH9ooevDOGQCZy9cDwAiKhfJoMUvn2bBeIiL_kwyaPQ&oe=69C3238B"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/02.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/653703868_1434279698712829_829791760701529145_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_ohc=a-d7lQURLckQ7kNvwG4gxgc&_nc_oc=AdqKnWzf7xp85BHIwXp7IF9tA6wkrbBunJn16Ar-jhCseJ5SOy-50jgCOq9eaVdsLyY&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=FuBB44KDsPqahh5u1SVT9A&_nc_ss=7a30f&oh=00_Afyf99N6nipuh6st6J0BHcbVcoViqdXLk-7Umcgdb5HmCA&oe=69C32C3D"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/03.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/652305774_1434279958712803_4498378209910419641_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=AbnssGAu6sMQ7kNvwGmbG3W&_nc_oc=Adrru27ya4_JbH5eSNVX14ZPgivFpQ270sVUTEm12Vw6roT7gcd3gGLDmo0gn_BQzHs&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=hkO4X6n7FFDMDrZzlOhf_Q&_nc_ss=7a30f&oh=00_AfxsohTOM5OS3gwAdZZzz0Xrs5RTExgz_GYPKhtNvusAyg&oe=69C30B9D"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/04.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/653704192_1434280205379445_5583640513410118819_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_ohc=5huBqWFKGNcQ7kNvwH3gOjd&_nc_oc=AdpGcrKlyxb0UT9ZOOaldXByvTUhkzoAtB9SV6tc3ii7-IGlknLxKCso_zFE_Rw9qI4&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=Uou4BCVy7wQJOwUQQyCkBA&_nc_ss=7a30f&oh=00_Afw1Dvsv_46Pah-8qo3EAT-rERmAur-iyBJe4bZvy6ncQA&oe=69C31C9A"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/05.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/655020733_1434289605378505_3851225326285292524_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_ohc=ttGSxkTXg8kQ7kNvwGM4pXQ&_nc_oc=AdqykrLD-GNkPfV-5JAOOl50C2UtC-PXNcXtgVl7nayx3RvY-5WgRkF7RwmQGJoYuKA&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=A5j3zy1IgwPQaLBsgulnZA&_nc_ss=7a30f&oh=00_AfxEylBOdHOzXf7wqyYftqoeYglqwubW0LYcbGUjgqMU3w&oe=69C33137"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/06.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/653701197_1434293668711432_7026397679921311299_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_ohc=yTXCV52gEwsQ7kNvwEBRBH4&_nc_oc=AdoqHkSHjb9Al3bf6Z3TSR8R49UT3tsJ5be1EucLpoS2oicIP_KGqZPGPxW5pc9Czjc&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=dDBdp6d9EeYDQJzOsd3FpQ&_nc_ss=7a30f&oh=00_Afz9HORO8BUAs7B0fMHI-QBx2zrVQiXYX55TcDS6XLza_A&oe=69C32C0A"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/07.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/654471984_1434295082044624_4224372577021107555_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=108&ccb=1-7&_nc_sid=7b2446&_nc_ohc=Y2X8TjtPpjgQ7kNvwGCqiOd&_nc_oc=Adpbu-2NuohV3FHhMEq8BrxtKq1brnVVe9yAvAN4fj0EsGwoPn6l4_8RZbiy0kJ0Y0Q&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=5c9PGVrtbde04jAgadzKNw&_nc_ss=7a30f&oh=00_AfxDbCZPRvWfE0wX9YX2oCiG6FQ3tMO6bQcfjnDusDdLnw&oe=69C32FCF"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/08.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/653703853_1434295735377892_416442692887187201_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=Tz65GWeg51sQ7kNvwHGv1GY&_nc_oc=AdqXRfPXSgVf2U5BgxpYXdgKNRy83wmVUxvfbmr8v185gEFqlIFhKQC8G04TpeJlWmU&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=MMnOYH5JnPkX60KE7assXA&_nc_ss=7a30f&oh=00_AfynF_ZVQP6rAjVnW5A1Y0WAybaq870TYBR2fIdS6ROJCQ&oe=69C32717"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/09.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/654879149_1434278812046251_1063848352086385649_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=Fq2SHczUUNYQ7kNvwE7T7ZP&_nc_oc=AdpCi-ZgoWrxtButZOz5rImWO71oMtTkTEZMIBXmdIQJVbWGxTNaGQ1yMQKt9hmUEJM&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=nftySaG3bRRetuuRvSNYiA&_nc_ss=7a30f&oh=00_AfyDs-OGPHIMQKd3bdxslFds7yuPMbHEucOLoSgypUONRw&oe=69C3321C"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/10.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/653895095_1434279798712819_4081913102438297486_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_ohc=Hy7njJ_Ab7wQ7kNvwGAe7y9&_nc_oc=AdrjTWNrBe4EUPvoyKU6jswh1jsDdukeIfZlVS5aUa9B7aXbEg6g5vCHSQGNBLQtmR8&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=5PuR0wGIBvsM7vusXDNVLA&_nc_ss=7a30f&oh=00_AfxmpUsmD7fG9nc0wBUyV8ATr-8GJOvP93lpyxoZOWkBHg&oe=69C3369D"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/11.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/653704538_1434280052046127_3620724687589849646_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_ohc=rf953cuV6mkQ7kNvwFlAqY4&_nc_oc=AdpUP9AkUXXIZJgSsDZou1SaYugSWCuzBI50UWTs49F2MO3whxnYxTE_TxkCKHTtGyQ&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=wgz50_VjovMtNfLhH84Fjg&_nc_ss=7a30f&oh=00_AfwU0H3Lhc7YbEM1_9xXNzrU-ttpV9oIpDGUHFpZqxShVw&oe=69C31378"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/12.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/654237855_1434280265379439_8928294697232429268_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=p8bi_tLiP4oQ7kNvwFntJAr&_nc_oc=AdrexGVPGiNqr5fOvHn_KC1r6gPRtAMXHHryrqCKKLFY-PIH3W3C_0F4Kl404z8T02k&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=P-GODdpX48uu7J4DcOM_jA&_nc_ss=7a30f&oh=00_Afx9EiUDw91K_F_1Koz1xZ_JfBYo8zy554azHkgO_wukVQ&oe=69C3086C"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/13.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/655613716_1434289712045161_9152920148367572800_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_ohc=7Wf4lhFGPiQQ7kNvwE1pfGI&_nc_oc=AdoT2UINnWfM2Zy2fUHWVwuBhBpPZ1f8B3pj985oLWmnbBUrcmnkK2vmZV0X3oIgS9o&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=v0lCAwHozXlAttkxqZACbw&_nc_ss=7a30f&oh=00_Afz2GcxcTiGXv4LT7a_XH4CClK421yOtmz6Ht1yvG0kaNg&oe=69C31792"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/14.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/655017537_1434293738711425_8174400237983323490_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_ohc=fH6dgLXY_yEQ7kNvwG6pNoU&_nc_oc=AdopMLo0TJP3nGYHwkDyhEEAjAlcC15Z8gHVtR0wiwUCJnkfcfHl1NNqFAsD0yFgIys&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=Z_ck5HZBuzeaIEb7jrHojw&_nc_ss=7a30f&oh=00_AfxtU75SrVRTt317kIHWp-7YKTJa0oToqTKydFCfaQwfOQ&oe=69C31795"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/15.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/653704081_1434295165377949_7981995071463764504_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_ohc=KU2HA3dpfyoQ7kNvwGrGGLp&_nc_oc=AdqG91TzRlvV_XoWI99IoPTiAJZSf4pp8OBgqjIFRHapLXScGXNv-UJJbNZ2eecKEZQ&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=RpzmviIqHhh9b3ad15YVeA&_nc_ss=7a30f&oh=00_AfyJRl9aUCCbXlW-511zlvflZK0SvoDYB_5-XKfiHcNnQA&oe=69C32CDB"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/16.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/652529298_1434278895379576_1094504724186172324_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=IEWkj-ma5JUQ7kNvwFUwg16&_nc_oc=AdoJQqjB-LwwGZv6rIIlXGyJvgIkLXqtIBxoNU9OloQEjOAfCXZ1RxxWBvfpTTi5iOk&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=5p1MDmJ4uA0Xa8VKAn6JPw&_nc_ss=7a30f&oh=00_Afzu6K_40oNVEIdWUAwz229lOs3t-1AFLH42sb4O7tazSA&oe=69C3124F"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/17.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/654237756_1434279872046145_9149928427791392457_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_ohc=V92X5Fh9e-sQ7kNvwFKygMa&_nc_oc=AdpLymk5c564A7FsBmhcF76pyO0eKER0qEsTXKppT5T4Q_0fUvrMgqBoIHI_VSeX87Q&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=sxuXI1Ng5JS133YyWPfdAQ&_nc_ss=7a30f&oh=00_AfxiwGAF31EVzXZC_vb7bzP7GcsvfuUufn863wYOzubcDw&oe=69C326AA"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/18.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/654231462_1434280138712785_8915714467459443242_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=-bOLy3UChC0Q7kNvwEjwNJw&_nc_oc=Adpax6o0UU9PlIp3BR7xBqzeCFz2G3yore464k1kRSSr6d55pkYBE8X9qIR-w2F8w1E&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=EcP2v_2ypMAtVwL-Mv3LnA&_nc_ss=7a30f&oh=00_AfzJ_c4zPpmTxfyRCkJRqdceUvh073AEkWkit_Kwji0LlQ&oe=69C30E53"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/19.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/654198235_1434282675379198_1837330614690866136_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=gZegmu7X3ygQ7kNvwEYyrQZ&_nc_oc=Adq9itoTT0UWcW4jin4ZsAZ4rEOjncYyhjdW-ih9CLpxTGw5gGMjKFzS2rTWmqyQlkw&_nc_zt=23&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=fQR6-7vGPSgZdHSwJqehgg&_nc_ss=7a30f&oh=00_AfxDoD9NumFBO3elsXYJJ5E_E31MFv6qttltAWMYCxCItA&oe=69C312FD"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/20.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/654267501_1434289792045153_3700782571719984404_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_ohc=n8vt1XXi_mcQ7kNvwGEWxre&_nc_oc=AdoGhEjVtSvN_rU84FC80izy8f3zhVrxlgDUUTh2HfAEkQqP066aYNUXkgygLjVPIaM&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=q2BhSy0pbrXGou9DhlMYjg&_nc_ss=7a30f&oh=00_Afzvlp9A8NnPXmuk_W9iGd4JAG5vP5SKhT7qIutOcn-2hw&oe=69C30475"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/21.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/653701214_1434294955377970_8496040099682073811_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_ohc=UMI29wGlt9AQ7kNvwFMADDZ&_nc_oc=AdodPwR0nu-AIGJod-GBt4VINO3d3QdgFFlrC78eRQpx3ukVt7usa1EFaW6JCSGD8Qo&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=TPk468lwR-LnZ0P0R5mM8g&_nc_ss=7a30f&oh=00_AfzhgAu9ua7GKlh7EZMHvWjzuPrppT4OD6Wfhhcd7-JIVg&oe=69C3310D"
+      },
+      {
+        "filePATH": "raw/raw_fb_dc2d50391180f6a8/22.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/654937870_1434295342044598_4669742542589679068_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=I03Dw7XZHNcQ7kNvwGIoZqA&_nc_oc=AdrXaTMrLTE3UysUyj4s_bn4AVFwUnFKKdTPZI_3IYXRd5BdFWoxQqwJxLHwtPQWMCU&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=hB3r_odn9EYGU2R5yk1Fcw&_nc_ss=7a30f&oh=00_Afzuj4EWmhLtZcxI-8KGXk5xcigq841b4R_tsb1fSXsI3Q&oe=69C30665"
+      }
+    ],
+    "nbrRooms": 2,
+    "nbrKitchens": 1,
+    "nbrBathrooms": 1,
+    "nbrToilets": 1,
+    "sourceId": "raw_fb_dc2d50391180f6a8",
+    "sourceText": "APPARTEMENT #ALOUER BON STANDING \n.............................................................................. \n \n2 CHAMBRES, 2 SALLES D'EAU, 1 SÉJOUR...\nSALLE A MANGER, CUISINE, 4 BALCONS, 1 SPLIT \n.\n1ER ETAGE, CUVE, SUPPRESSEUR, WC VISITEUR \n4 OCCUPANT DANS LA BARRIÈRE AVEC GARDIEN \nQUARTIER AKANDA-MARSEILLE 2\n. \n#LOYER : 350.000 CFA \nUSAGE : #HABITATION \nVIRTUELLE \n \nhttps://vt.tiktok.com/ZSug1kXpR/\n...\n 06 56 95 34  WHATSAPP \n#pourtoi #gabon #jikaimmo #maison #libreville #akanda"
+  },
+  "imageCountLinked": 22,
+  "modelRejectReason": null,
+  "imageLinking": {
+    "linkedAt": "2026-03-20T13:14:33.002Z",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_dc2d50391180f6a8.json",
+    "totalRawImages": 22,
+    "successRawImages": 22,
+    "linkedCount": 22
+  }
+}

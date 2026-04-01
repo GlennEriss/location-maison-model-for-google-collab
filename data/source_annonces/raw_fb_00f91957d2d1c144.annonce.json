@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-20T13:15:26.775Z",
+  "jobId": "job_format_run_20260320131447_all",
+  "modelJobId": "scrap-format-all-20260320131447-p01",
+  "modelRecordSource": "accepted",
+  "source": {
+    "rawPostId": "raw_fb_00f91957d2d1c144",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_00f91957d2d1c144.json",
+    "sourcePlatform": "facebook",
+    "sourcePostUrl": "https://www.facebook.com/groups/953208923179218/posts/1471454761354629",
+    "sourcePostId": "1471454761354629",
+    "sourceAuthorName": "Maison à louer 2 Akanda, Lbv, owendo",
+    "sourcePublishedAt": null,
+    "advertiser_uuid": "rO9AwHrh1aT9S6mbkFsQWKtNJqz2",
+    "advertiser_email": "ikaimmo@ttn.ga",
+    "scrapedAt": "2026-03-20T13:14:47.765Z",
+    "hashSignature": "sha256:f672cdd57a10d0f7d8590ee4e04c1930c45d98ad9138b9be30e228851581dd44"
+  },
+  "annonce": {
+    "typeProperty": "Land",
+    "title": "Terrain de 600 m² à Akanda",
+    "description": "Terrain situé à Akanda avec potentiel pour projet résidentiel",
+    "area": 600,
+    "price": 100000,
+    "tags": [
+      "Agence"
+    ],
+    "status": "FOR_SALE",
+    "street": "",
+    "city": "",
+    "province": "",
+    "longitude": 11.446591688888892,
+    "latitude": -0.7645098777777779,
+    "country": "Gabon",
+    "countryCode": "GA",
+    "images": [
+      {
+        "filePATH": "raw/raw_fb_00f91957d2d1c144/01.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/653534266_1434412222032910_7296738480701583729_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_ohc=m5nX_60vQDQQ7kNvwGr-_QI&_nc_oc=AdqBbVd9PoaKLTJMcikY_KMFj8YHYsAT7yctWUe8UNb_FFEt8pmPNskAiFsJGkBOnso&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=LUOQqNolPn8dSdGUtcMdYA&_nc_ss=7a30f&oh=00_AfzQeqdb5cA_18QsZ_mRBf8QVwr_0yeqwdeMU0eIO0PIpQ&oe=69C30543"
+      },
+      {
+        "filePATH": "raw/raw_fb_00f91957d2d1c144/02.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/653704334_1434412498699549_2245549030930070678_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=CF1wF1EFOpAQ7kNvwEdNxDm&_nc_oc=Adq_24D6uAQgb4yTNUPoeyP6fA4rQs1hxGQ_4oyrb5hPFU0hOitfc3dUhD_ILr0BXys&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=SqSalKi5Gf2ANZvNuRHSbA&_nc_ss=7a30f&oh=00_Afw-eQCCItVnPd883g4XVPPPnzU2J1KzhGjG2Ags2Fe5LQ&oe=69C305C1"
+      },
+      {
+        "filePATH": "raw/raw_fb_00f91957d2d1c144/03.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/653705429_1434412835366182_2742538425605086489_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_ohc=QyxbDH1kP6sQ7kNvwHgGDNI&_nc_oc=Ado9Qixgc4BSOB9A4Zlng7c_7_UjmhwV1SrJ5j_LYwbXWFPHfLYMouC_wfmxoqA08ho&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=R5KpCcIL7J00inQWDajvJA&_nc_ss=7a30f&oh=00_Afy3NqoUoTI3_P9GxzfiNP9thmucch-lk8vJeKTmctHGNw&oe=69C310DF"
+      },
+      {
+        "filePATH": "raw/raw_fb_00f91957d2d1c144/04.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/653346496_1434412312032901_8408035255461028638_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=rzQdjMn3X0EQ7kNvwErz2SB&_nc_oc=AdpkK6LNEKEh7oILpsc5j3un1wHzKBrp3NZFYHHipxoKFuEP7b0Ixfkq2NwHtj3g56E&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=jKIUQe2owH2ytKkTgIhuzw&_nc_ss=7a30f&oh=00_AfwNcsj2tc9sUbjVdzLA1-TQyonZ-7vqwyCoGVaujD-oSw&oe=69C3018F"
+      },
+      {
+        "filePATH": "raw/raw_fb_00f91957d2d1c144/05.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/653323646_1434412598699539_174155564166935838_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=105&ccb=1-7&_nc_sid=7b2446&_nc_ohc=qlLRDx3KpxIQ7kNvwHYqN8k&_nc_oc=Adpe-F7Fo8sfk3N1lFGs7wc7AZ3cnk-ytZpIIh5AYJ_4_b_0LJOQs6af9hM-s1WouIg&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=ntURInKJjw1ImckoN0gm5g&_nc_ss=7a30f&oh=00_AfyZN1OKl0WIuIZLE9-0QR-OqQm1ZDMNLkHeNeXM1Ljy7w&oe=69C307F0"
+      },
+      {
+        "filePATH": "raw/raw_fb_00f91957d2d1c144/06.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/654660454_1434412925366173_3340197107510283662_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=_2CMifyJwd0Q7kNvwGgwBVa&_nc_oc=Adp_Jv8yZHtG_DK8dN6x1FPrnxMvklE6gfrElZhVBZitMegnZ3b3rU3OL1mgMhi5O-E&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=LPcRXux47pAInLNnI2roIw&_nc_ss=7a30f&oh=00_AfxOYrPdriAYHKNMHOBr_C1HT8qaWaA2NVXSw5HDeKm56Q&oe=69C3252A"
+      },
+      {
+        "filePATH": "raw/raw_fb_00f91957d2d1c144/07.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/655159033_1434412398699559_9102627356360940771_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=109&ccb=1-7&_nc_sid=7b2446&_nc_ohc=v200fwVNH_8Q7kNvwHuvUf2&_nc_oc=AdoGyyVN7QUlELHN6mQSClwnxbWVATDnjSONd4KdaV3InW2e6cWXbd0ViEzveFCYmwY&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=NoLWpEODNg_GXHbb_WWaaQ&_nc_ss=7a30f&oh=00_AfxhrLFqA_OEG201_gWHUxuLAyJpi7rqkB-pmbOwFGAIUg&oe=69C31E0E"
+      },
+      {
+        "filePATH": "raw/raw_fb_00f91957d2d1c144/08.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/652252643_1434412755366190_1203085481748177842_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=104&ccb=1-7&_nc_sid=7b2446&_nc_ohc=EsSPj_76p7YQ7kNvwH6Dk8F&_nc_oc=Adp3Mw12Xu3qn7GV02nDs8BMwyPOo2RFINhS1MzZDPjHYPZ_GuSX3_Fzf1AKIPHG85A&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=jmWOOqipVh2C99g7sjaxIA&_nc_ss=7a30f&oh=00_AfxDxH1kOozRfYgOqZwUoYMquCy8UisIRnB-W9qRA6mVPw&oe=69C309D7"
+      }
+    ],
+    "nbrRooms": 0,
+    "nbrToilet": 0,
+    "sourceId": "raw_fb_00f91957d2d1c144",
+    "sourceText": "OPPORTUNITÉ FONCIÈRE EXCEPTIONNELLE – \n Akanda – Mangoumba  (2 hotel)\n 600 m²\n Cession\nMagnifique terrain avec soubassement, idéal pour projet de villa ou résidence. NB: Pas très loin du béton  \n .\n Prix : 8.000.000 Fcfa \n  06 56 95 34   WHATSAPP \n#pourtoi #gabon #jikaimmo #maison #libreville #akanda"
+  },
+  "imageCountLinked": 8,
+  "modelRejectReason": null,
+  "imageLinking": {
+    "linkedAt": "2026-03-20T13:15:26.775Z",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_00f91957d2d1c144.json",
+    "totalRawImages": 8,
+    "successRawImages": 8,
+    "linkedCount": 8
+  }
+}

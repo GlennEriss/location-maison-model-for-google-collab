@@ -1,0 +1,12 @@
+pyyaml
+pydantic>=2
+transformers
+datasets
+accelerate
+peft
+trl
+torch
+tqdm
+rich
+jsonlines
+scikit-learn

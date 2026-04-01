@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-20T04:09:16.631Z",
+  "jobId": "job_format_run_20260320034400_onesime-negoce",
+  "modelJobId": "scrap-format-onesime-negoce-20260320034400-p07",
+  "modelRecordSource": "validation_reject_record",
+  "source": {
+    "rawPostId": "raw_fb_5b7600611ad7bb5f",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_5b7600611ad7bb5f.json",
+    "sourcePlatform": "facebook",
+    "sourcePostUrl": "https://www.facebook.com/stephanas.osenimes/posts/pfbid02hQct5wjhfzBtYGx8RPAJH1UgqjVAdPnb6figffbsNMDuRH5NzgaSoCm7N6u4LPqEl",
+    "sourcePostId": null,
+    "sourceAuthorName": "Onésime Négoce",
+    "sourcePublishedAt": null,
+    "advertiser_uuid": "0tmnIUbOdaa0MP1JIqCryOb7rYG2",
+    "advertiser_email": "onesimenegoce@ttn.com",
+    "scrapedAt": "2026-03-19T03:06:34.934Z",
+    "hashSignature": "sha256:5dc9a5c12c610798c22427aeee1b8e94576e2d4eb4ee16f0c45c7d3a025d6bfd"
+  },
+  "annonce": {
+    "typeProperty": "Studio",
+    "title": "Studio style américain à Owendo Pédiatrie",
+    "description": "Studio style américain situé à Owendo Pédiatrie, adapté aux activités de garde",
+    "area": 0,
+    "price": 190000,
+    "tags": [
+      "Agence",
+      "Sécurisé"
+    ],
+    "status": "FOR_RENT",
+    "street": "Pédiatrie",
+    "city": "Owendo",
+    "province": "Estuaire",
+    "longitude": 9.5009,
+    "latitude": 0.3239,
+    "country": "Gabon",
+    "countryCode": "GA",
+    "images": [
+      {
+        "filePATH": "raw/raw_fb_5b7600611ad7bb5f/01.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/615479933_2035617024055269_4249656081568112642_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=7b2446&_nc_ohc=AuFCelxE1DIQ7kNvwHslB67&_nc_oc=Adqm_PFBvd9YaUyBBlAtAvjNiRiSQq5ihtF40fg8b_EH0Zn43s4VtKA9a1wgkH6QdiQ&_nc_zt=23&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=c7jRee0gwRB_RbL-3zwlAw&_nc_ss=8&oh=00_Afw5HqVmvOn57gkyOoiotKzBAyI6MJL3mGRUyvhPpaRc-g&oe=69C143CF"
+      },
+      {
+        "filePATH": "raw/raw_fb_5b7600611ad7bb5f/02.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/618221530_2035617657388539_5954570855318244609_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_ohc=Y_sqD_s9hMAQ7kNvwFrUmgJ&_nc_oc=AdpkuXRC0AOvB9H_-L3-x0B2q9LR03e9JqGrKlFNLF8-HYO4sFokm-m3ueQihQ3X3eY&_nc_zt=23&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=JUtwuWpQNoiqJRAoWgPOaw&_nc_ss=8&oh=00_AfzaAd7uyPJfdkMeAO_zQNXz0ct8kIYTMb1iE3A_rdwQtQ&oe=69C1273D"
+      },
+      {
+        "filePATH": "raw/raw_fb_5b7600611ad7bb5f/03.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/616282977_2035616227388682_8565808659070664212_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_ohc=1Tz6EzHmHe4Q7kNvwHHFudv&_nc_oc=AdoNFpT5yB2D7blat-BNVP1mpfbfIdISYDr6g3qjjLqXBuBgXb02NyZAMmrkYRzJL10&_nc_zt=23&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=yLm8nVfap43hj2uw-1enDg&_nc_ss=8&oh=00_AfxtaDU_pGBFUy4gaswh0M_bjziXBHbI8LBUSARkJmTs_Q&oe=69C1511C"
+      },
+      {
+        "filePATH": "raw/raw_fb_5b7600611ad7bb5f/04.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/617047434_2035616707388634_5599329948313114082_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_ohc=cxRvbcQYMO0Q7kNvwHosfDk&_nc_oc=Adqrjyw00H08NciSwlGtpNaSIOkkjOyMOAfJ2gCVHSzHkBw4VHclh_n1A5Tpa75pask&_nc_zt=23&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=KqORlpCB8L9_fhPUZwaGAQ&_nc_ss=8&oh=00_AfyyMWwhEvnIowjs4nj310n_apvhEYc-aMrSmVF557UJXA&oe=69C137E3"
+      },
+      {
+        "filePATH": "raw/raw_fb_5b7600611ad7bb5f/05.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/617064423_2035617320721906_4313591571126987876_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=qEAYsZRX03QQ7kNvwFrrhTJ&_nc_oc=Adrd_QT9fe_Hn_5MgPlnCCY_kHrcSjD09BjVnwWq9u1-B91X2CZZLwt1mfJusDxxh1M&_nc_zt=23&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=mkuXyBNQrQc1r7_FKoOpdg&_nc_ss=8&oh=00_AfzhDo4rKVsl_mtjv662Ov20XUfnGjtqreACoCZRyZwpGA&oe=69C14DF4"
+      },
+      {
+        "filePATH": "raw/raw_fb_5b7600611ad7bb5f/06.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/616358218_2035617937388511_6206641044844554659_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=qiq_GAbyNhcQ7kNvwEiafxz&_nc_oc=AdpZklXCHB2MnwCgQY4yueXTUvjZPNM39J-ugAPa2dyQUhDE_oowLjYe2y7xEDbadyU&_nc_zt=23&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=_oA351Cuo89as1tTgKXa6w&_nc_ss=8&oh=00_Afy_DPr3fAspCTvXWww5SfhtZ4-A8tNmU8UfpQ5wyTcREw&oe=69C14E7B"
+      },
+      {
+        "filePATH": "raw/raw_fb_5b7600611ad7bb5f/07.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/616092724_2035616317388673_5178444055032529881_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_ohc=ir0rIQq50bIQ7kNvwFWRtJA&_nc_oc=AdoycOjEKwdt-k2enq1V9xJ8NaB_M2V08VEWTw0uQ2uDp3eT4jxqSUkMSwwBAIta0t4&_nc_zt=23&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=p71rc7HFlgdPpq5sPbUSWw&_nc_ss=8&oh=00_AfwIfbw0jcPe1Ng9nSKyg-g1LIpxZRxFc7VaDRjS_KA05Q&oe=69C14E6E"
+      },
+      {
+        "filePATH": "raw/raw_fb_5b7600611ad7bb5f/08.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/618491363_2035616877388617_9161025177067444894_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=7b2446&_nc_ohc=Dz_sHYEs8dgQ7kNvwHCjNRs&_nc_oc=AdrOh8_S4HmKgh131h37e9HUWNDGHgLmlYg7M_W_jWac8ZoFp5x9YsvVJ7w3RcJMPnA&_nc_zt=23&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=3RrycGN51IXjfhMV93QW1Q&_nc_ss=8&oh=00_AfxThSQTDbeOjke6u5pQD2rHU6vKjTyOlAf-IQY3RJ6reg&oe=69C14CE5"
+      },
+      {
+        "filePATH": "raw/raw_fb_5b7600611ad7bb5f/09.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/617551666_2035617490721889_8145067521607455458_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=7b2446&_nc_ohc=OmtiogqsYecQ7kNvwGNiVBQ&_nc_oc=Adr8EJdgEtTAVcsxuJxu6ZxEAxitYr1kqTis6aGQsk4BnwLzslKV-CBbu8noftaD1z0&_nc_zt=23&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=PvUU7l4TNjLpEcrZ8Cipuw&_nc_ss=8&oh=00_AfzeCULCeG-ZkTj3xvKBEQVLX_xdNWeQxBvsFZGvpB1m-A&oe=69C13E5A"
+      }
+    ],
+    "nbrFloorStudio": 1,
+    "numeroStudio": "S-88",
+    "nbrRooms": 1,
+    "nbrBathrooms": 1,
+    "nbrKitchens": 1,
+    "sourceId": "raw_fb_5b7600611ad7bb5f",
+    "sourceText": "LOCATION D'UN STUDIO STYLE AMÉRICAIN À OWENDO PÉDIATRIE EN ACCÈS TRÈS FACIL CLÔTURÉ, SÉCURISÉ\nTELS: 074801717/066176767\nDÉPLACEMENT: 5000F\nPRIX: 190000F\nLOYER+CAUTION+FRAIS D'AGENCE \n#CARACTERISTIQUES \n1 CHAMBRE AVEC PLACARD \n1 COIN CUISINE AVEC PLACARDS \n1 SALON MOYEN\n1 POSE MACHINE À LAVER \n1 GARDIEN \n1 COMPTEUR PERSONNEL \nNB: CLIENT SÉRIEUX APPELLE"
+  },
+  "imageCountLinked": 9,
+  "modelRejectReason": "Housing type requires nbrToilets >= 1",
+  "imageLinking": {
+    "linkedAt": "2026-03-20T04:09:16.631Z",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_5b7600611ad7bb5f.json",
+    "totalRawImages": 9,
+    "successRawImages": 9,
+    "linkedCount": 9
+  }
+}

@@ -1,0 +1,81 @@
+project:
+  name: location-maison-model-for-google-collab-local-smoke
+  environment: local-smoke
+  seed: 42
+paths:
+  raw_data_dir: data/raw
+  interim_data_dir: data/interim
+  processed_data_dir: data/processed
+  dataset_dir: data/smoke_datasets
+  log_dir: logs/local-smoke
+  app_log_dir: logs/local-smoke/app
+  train_log_dir: logs/local-smoke/train
+  error_log_dir: logs/local-smoke/error
+  checkpoint_dir: outputs/local-smoke/checkpoints
+  metrics_dir: outputs/local-smoke/metrics
+  report_dir: outputs/local-smoke/reports
+dataset:
+  initial_target_size: 10
+  output_filename: smoke_dataset.jsonl
+  source_annonce_dir: data/source_annonces
+  source_properties_dir: data/source_properties
+  source_posts_dir: data/post-for-facebook
+  processed_relevance_dir: data/processed/relevance
+  split:
+    train: 0.6
+    validation: 0.2
+    test: 0.2
+  composition:
+    standard_cases_ratio: 0.8
+    hard_cases_ratio: 0.2
+  diversity_targets:
+    min_property_types: 3
+    min_tag_coverage_ratio: 0.2
+    include_noisy_spelling: true
+    include_short_ads: true
+    include_long_ads: false
+    include_missing_fields: true
+model:
+  base_model: Qwen/Qwen2.5-3B-Instruct
+  tokenizer_max_length: 256
+  quantization: none
+  trust_remote_code: false
+training:
+  enabled: true
+  strategy: lora
+  task_type: causal_lm
+  epochs: 1
+  batch_size: 1
+  gradient_accumulation_steps: 1
+  learning_rate: 0.0002
+  warmup_ratio: 0.0
+  weight_decay: 0.01
+  logging_steps: 1
+  eval_steps: 2
+  save_steps: 2
+  save_total_limit: 2
+  max_seq_length: 256
+  mixed_precision: fp16
+lora:
+  r: 8
+  alpha: 16
+  dropout: 0.05
+  target_modules:
+  - q_proj
+  - k_proj
+  - v_proj
+  - o_proj
+logging:
+  level: INFO
+  console: true
+  json_logs: true
+  metrics_file: outputs/local-smoke/metrics/latest_metrics.json
+  error_file: error/errors.log
+  app_file: app/application.log
+  train_file: train/train.log
+runtime:
+  device_preference: mps
+  allow_cpu_fallback: true
+  num_workers: 0
+  fail_fast: true
+  mps_memory_budget_gb: 8

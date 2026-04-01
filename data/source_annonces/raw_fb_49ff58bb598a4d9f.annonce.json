@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-20T13:10:35.252Z",
+  "jobId": "job_format_run_20260320130955_all",
+  "modelJobId": "scrap-format-all-20260320130955-p01",
+  "modelRecordSource": "validation_reject_record",
+  "source": {
+    "rawPostId": "raw_fb_49ff58bb598a4d9f",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_49ff58bb598a4d9f.json",
+    "sourcePlatform": "facebook",
+    "sourcePostUrl": "https://www.facebook.com/groups/953208923179218/posts/1465342705299168/?comment_id=1467552548411517",
+    "sourcePostId": "1465342705299168",
+    "sourceAuthorName": "Maison à louer 2 Akanda, Lbv, owendo",
+    "sourcePublishedAt": null,
+    "advertiser_uuid": "rO9AwHrh1aT9S6mbkFsQWKtNJqz2",
+    "advertiser_email": "ikaimmo@ttn.ga",
+    "scrapedAt": "2026-03-20T13:09:55.538Z",
+    "hashSignature": "sha256:ba112ce01167ecefc93473f80308cf94bb8a14dd47bd3e1c8ed3fcf6e494e4fb"
+  },
+  "annonce": {
+    "typeProperty": "Studio",
+    "title": "Studio à louer à Marseille 2",
+    "description": "Studio fonctionnel situé à Akanda, avec espace cuisine et séjour, placards et deux balcons",
+    "area": 0,
+    "price": 200000,
+    "tags": [
+      "Agence",
+      "Balcon",
+      "Parking",
+      "Sous barrière"
+    ],
+    "status": "FOR_RENT",
+    "street": "Marseille 2",
+    "city": "Akanda",
+    "province": "Estuaire",
+    "longitude": 9.3226158,
+    "latitude": 0.6112932,
+    "country": "Gabon",
+    "countryCode": "GA",
+    "images": [
+      {
+        "filePATH": "raw/raw_fb_49ff58bb598a4d9f/01.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/651240585_1428625419278257_2786828049794827192_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=xCZeOu7BftoQ7kNvwED_R-h&_nc_oc=Ado77tMxZG1QI9CCf79nc55z5ZHRBIu9LEgs6kuPK4wDC6E4_QegPnOWyQU--S3ZlkU&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=bH8so0M_IgdZWu9AM4h8Xg&_nc_ss=7a30f&oh=00_AfzdemkKAmz8XHlHOUkxGQFlrZ0WoEtic6mJEMrjROu8TA&oe=69C32C2A"
+      },
+      {
+        "filePATH": "raw/raw_fb_49ff58bb598a4d9f/02.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/650205149_1428625665944899_1021070674100049588_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=110&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=QTiqEdFvxYUQ7kNvwHKzwC5&_nc_oc=AdqrDMCMm7B8h_VlMOnbgMCFdhvsrEszrDmcm2tvV_vCxCthoQhtixvE3GQtgBsTJFw&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=IrRGMBkcYsZb5OrIbS_ZfA&_nc_ss=7a30f&oh=00_AfxqfOguldsIeOB7zNKaUB7lRxAeJg0jgdX9tYQ43tIDsA&oe=69C31BB6"
+      },
+      {
+        "filePATH": "raw/raw_fb_49ff58bb598a4d9f/03.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/650974804_1428625945944871_157540818395034304_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=46H10R4gKd8Q7kNvwHiTmHY&_nc_oc=AdqwfZfgOZ0xdxcu421UKwiAcp4hwSys7rE248zDHLhb5GSxCI0jLm5JH_mf4ce_csw&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=OJB7QpLiShWK2kkxmf1Acg&_nc_ss=7a30f&oh=00_Afy_O2Jlm76fUKnnordz8QjvsnbHZzV_4KHVlYd_iC393A&oe=69C32C60"
+      },
+      {
+        "filePATH": "raw/raw_fb_49ff58bb598a4d9f/04.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/650229158_1428627202611412_1506750439530510801_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=106&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=iffH5tKvBPAQ7kNvwENAB9s&_nc_oc=AdoMM_ZsutQTa804O9Jds0k-spe0d1YMLYAekpoEvcOgdYPwVo3foHRsiZsmC3LzGXc&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=0_oJ0dk7H3Gzufs9a8LB2w&_nc_ss=7a30f&oh=00_Afwo-DrchqekjouOgJ_z_BNlK7Bug6Z9yNjqvniFP6_luA&oe=69C33298"
+      },
+      {
+        "filePATH": "raw/raw_fb_49ff58bb598a4d9f/05.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/651009664_1428625515944914_6690670156648725983_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=105&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=28OskKVER_cQ7kNvwEhaq0i&_nc_oc=AdrrwF9PXOPAY_zLdulg3Yiyva9XmnlwKI-FAH20E63eF3UPzIcnyRlmDIKtU4tMlFk&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=-ssAVCEq7PApScdR9M9JXA&_nc_ss=7a30f&oh=00_AfzVRQCFZMsYUVFnhbjAh94TXKdf7smA2OeZXrZySy9jqA&oe=69C3107B"
+      },
+      {
+        "filePATH": "raw/raw_fb_49ff58bb598a4d9f/06.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/651688506_1428625765944889_6048046656715711987_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=105&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=FrHTgd4eYD0Q7kNvwE2BTWz&_nc_oc=AdoBH8b7t9RHJAyK_J-QIRQfk24bp8MMaoG-jsGTrKRcF3SGTDxEE-z44PfNk_YdVAQ&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=WCZdD2GvONArUSf_jxD8dQ&_nc_ss=7a30f&oh=00_Afx37rAQhWqGkgylGgYD3c5FuAsOWVEcc_-hnsrhX0IlLA&oe=69C30699"
+      },
+      {
+        "filePATH": "raw/raw_fb_49ff58bb598a4d9f/07.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/651318876_1428626019278197_5000428943481529003_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=103&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=vH010uVa7f0Q7kNvwEWAjI0&_nc_oc=AdrWg65i35f7U70UTL1qUVX1jI_TOnmJWxJPwanrx24TVRBKuK5HXh7HoBLckR1yiVk&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=zKqzznhaojjJF7qGco3Wjg&_nc_ss=7a30f&oh=00_AfxlsJU7rNU8Pm_aunSQzacNlfu2uskyvP4ohIrL4lLEZA&oe=69C3351C"
+      },
+      {
+        "filePATH": "raw/raw_fb_49ff58bb598a4d9f/08.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/650385927_1428625595944906_6059342564522805664_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=100&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=LtrrJvVUMcEQ7kNvwHcfG97&_nc_oc=Adq7CN4qsBKNmZdbB0w0arXv96wlOhuPqLcZDkxYqERssIb44-N3bTqgD6KmzhQMQmw&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=YR1Q4Sbf_QDAyq3-V5mmYg&_nc_ss=7a30f&oh=00_AfwycP0MXJOyWpTQ_5ZT9szsFoG4vW2MpF29zGI9czG_Lw&oe=69C32697"
+      },
+      {
+        "filePATH": "raw/raw_fb_49ff58bb598a4d9f/09.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/650990523_1428625865944879_464736173685421632_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=109&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=ZGWD1VNsahAQ7kNvwE_05Yt&_nc_oc=Adpto0sXussLuZ4PVKcOrW-XKxC4mvMfE5JQIJTdQNpjhr9eRcn_xTo_Lj2JeifRuvM&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=mfxVFsyh-imKmuA-uPfATg&_nc_ss=7a30f&oh=00_AfyA1uiOPjKuwyyBI5jsWN7LmFICy8Y5ZM20fdBbgIf9qA&oe=69C31608"
+      },
+      {
+        "filePATH": "raw/raw_fb_49ff58bb598a4d9f/10.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/650181976_1428627125944753_7901458443892271729_n.jpg?stp=cp6_dst-jpegr_tt6&_nc_cat=101&ccb=1-7&_nc_sid=e06c5d&_nc_ohc=UPxD5vij6isQ7kNvwEE_cDP&_nc_oc=AdqQU9h-C6dlPgkeUHnmgkq2fenInTXxnraqRtzLktj-2RFvW6gDP9kuJhcLZI0AR3Y&_nc_zt=23&se=-1&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=ezS7XJUGl_9yBbMTsk2sCA&_nc_ss=7a30f&oh=00_Afza_MIcdJX9Om85KTDH2oyJMFlUVH6BJr6Gj0zh5hTeXw&oe=69C31D65"
+      }
+    ],
+    "nbrFloorStudio": 1,
+    "numeroStudio": "S-86",
+    "nbrRooms": 1,
+    "nbrBathrooms": 1,
+    "nbrKitchens": 1,
+    "sourceId": "raw_fb_49ff58bb598a4d9f",
+    "sourceText": "#STUDIO #ALOUER  STANDING 1ERE \n \n.............................................................................. \n \nUNE CHAMBRE, UNE SALLE D'EAU, SÉJOUR...\nUNE CUISINE, 2 BALCONS, 1ER ETAGE, PLACARDS \nDANS LA BARRIÈRE, PARKING, SUPPRESSEUR \n.\nQUARTIER : AKANDA MARSEILLE 2 \n \n.\n#LOYER 200.000 CFA \nUSAGE : #HABITATION \n \nVIRTUELLE \n \n  06 56 95 34    WHATSAPP \n#pourtoi #gabon #jikaimmo #maison #studio #flypviral—  hyper bien, à Libreville, Estuaire, Gabon."
+  },
+  "imageCountLinked": 10,
+  "modelRejectReason": "Housing type requires nbrToilets >= 1",
+  "imageLinking": {
+    "linkedAt": "2026-03-20T13:10:35.252Z",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_49ff58bb598a4d9f.json",
+    "totalRawImages": 10,
+    "successRawImages": 10,
+    "linkedCount": 10
+  }
+}

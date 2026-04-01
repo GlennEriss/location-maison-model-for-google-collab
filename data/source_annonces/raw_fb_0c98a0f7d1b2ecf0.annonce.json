@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-20T07:16:11.669Z",
+  "jobId": "job_format_run_20260320071524_all",
+  "modelJobId": "scrap-format-all-20260320071524-p01",
+  "modelRecordSource": "validation_reject_record",
+  "source": {
+    "rawPostId": "raw_fb_0c98a0f7d1b2ecf0",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_0c98a0f7d1b2ecf0.json",
+    "sourcePlatform": "facebook",
+    "sourcePostUrl": "https://www.facebook.com/stephanas.osenimes/posts/pfbid02UoMApt2oJzmEQ3n7uWjNmBt3aNmapAe9WkgKtL6uzmf2m7jBhCkEVRoBuUX4epVsl",
+    "sourcePostId": null,
+    "sourceAuthorName": "Onésime Négoce",
+    "sourcePublishedAt": null,
+    "advertiser_uuid": "0tmnIUbOdaa0MP1JIqCryOb7rYG2",
+    "advertiser_email": "onesimenegoce@ttn.com",
+    "scrapedAt": "2026-03-20T07:15:24.403Z",
+    "hashSignature": "sha256:76726bdf38b8c8f706c9f6f2491835f344659a96377f3f54f096e59a933233af"
+  },
+  "annonce": {
+    "typeProperty": "Studio",
+    "title": "Studio à louer à Pédiatrie",
+    "description": "Studio fonctionnel situé à Owendo, adapté aux activités professionnelles",
+    "area": 0,
+    "price": 150000,
+    "tags": [
+      "Agence",
+      "Sous barrière"
+    ],
+    "status": "FOR_RENT",
+    "street": "Pédiatrie",
+    "city": "Owendo",
+    "province": "Estuaire",
+    "longitude": 9.5009,
+    "latitude": 0.3239,
+    "country": "Gabon",
+    "countryCode": "GA",
+    "images": [],
+    "nbrFloorStudio": 2,
+    "numeroStudio": "S-88",
+    "nbrRooms": 1,
+    "nbrBathrooms": 1,
+    "nbrKitchens": 1,
+    "sourceId": "raw_fb_0c98a0f7d1b2ecf0",
+    "sourceText": "LOCATION D'UN MAGNIFIQUE STUDIO MODERNE 2ÈME MAINS À OWENDO DERRIÈRE LA PÉDIATRIE\nTELS: 074801717/066176767\nDÉPLACEMENT: 5000F\nPRIX: 150000F \nLOYER+CAUTION+FRAIS D'AGENCE \n#CARACTÉRISTIQUES \n1 CHAMBRE AVEC PLACARDS \n1 DOUCHE WC EN CHAMBRE\n1 COIN CUISINE \n1 SALON\n1 POSE MACHINE À LAVER \nNB: PBS D'EAU 3JRS/7JRS\nCLIENT SÉRIEUX APPELLE"
+  },
+  "imageCountLinked": 0,
+  "modelRejectReason": "Housing type requires nbrToilets >= 1",
+  "imageLinking": {
+    "linkedAt": "2026-03-20T07:16:11.669Z",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_0c98a0f7d1b2ecf0.json",
+    "totalRawImages": 0,
+    "successRawImages": 0,
+    "linkedCount": 0
+  }
+}

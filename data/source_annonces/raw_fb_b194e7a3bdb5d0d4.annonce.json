@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "generatedAt": "2026-03-20T04:09:16.630Z",
+  "jobId": "job_format_run_20260320034400_onesime-negoce",
+  "modelJobId": "scrap-format-onesime-negoce-20260320034400-p06",
+  "modelRecordSource": "accepted",
+  "source": {
+    "rawPostId": "raw_fb_b194e7a3bdb5d0d4",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_b194e7a3bdb5d0d4.json",
+    "sourcePlatform": "facebook",
+    "sourcePostUrl": "https://www.facebook.com/stephanas.osenimes/posts/pfbid0Ci3Gr6xztsPgYSBjnjdzG5J4upZv7Y1R9QkVvUgKbnE74FiS7DHi6xLvKvRaMmUrl",
+    "sourcePostId": null,
+    "sourceAuthorName": "Onésime Négoce",
+    "sourcePublishedAt": null,
+    "advertiser_uuid": "0tmnIUbOdaa0MP1JIqCryOb7rYG2",
+    "advertiser_email": "onesimenegoce@ttn.com",
+    "scrapedAt": "2026-03-19T03:05:57.407Z",
+    "hashSignature": "sha256:b4640c555f3aba092cc0fe68fefc855956b23c54090e20c405974b28c20cf4f5"
+  },
+  "annonce": {
+    "typeProperty": "Apartment",
+    "title": "Appartement 3 chambres à louer à Charbonnages",
+    "description": "Appartement de 3 chambres situé à Libreville, avec séjour, cuisine, sanitaires et garage",
+    "area": 0,
+    "price": 360000,
+    "tags": [
+      "Agence",
+      "Parking"
+    ],
+    "status": "FOR_RENT",
+    "street": "Charbonnages",
+    "city": "Libreville",
+    "province": "Estuaire",
+    "longitude": 9.4462423,
+    "latitude": 0.4361651,
+    "country": "Gabon",
+    "countryCode": "GA",
+    "images": [
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/01.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/616197176_2035631044053867_3902610093245269222_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_ohc=PLBn6M82rdcQ7kNvwHQTgN1&_nc_oc=AdosB5OAjNEN_Xz6NdWARDoGoZnrdkW7hmm18eVlrbzKaSetwh7mTT7dzJVMzFQg_NA&_nc_zt=23&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=3_RUb4syqbXTSExiyOFZrg&_nc_ss=8&oh=00_AfyNks0hlsu3eAeF-ExcX9VSvXd16TQoG-AMNPtGPRUjmQ&oe=69C11FBF"
+      },
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/02.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/619243376_2035631364053835_6323325759234180582_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_ohc=Ww8MdQD_WrQQ7kNvwFF5j-8&_nc_oc=AdoXisk4Kldkv0ztc_ZqyZv42DOxyKs9kIF07lrpJLd2FRzrj3Q4pS0M8QkkilcTsDE&_nc_zt=23&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=fenbkLEiVl11yJLmATpFJg&_nc_ss=8&oh=00_AfyF5ErdCet-hhuGsnHPsLEbhhI2WZuLwdK7L5-JofokmQ&oe=69C13C69"
+      },
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/03.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/618806750_2035631700720468_5020112938407334441_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_ohc=3ZAw8a__2zIQ7kNvwEKJFug&_nc_oc=AdruYJAgRgXZcDHFylNfPFFy6wRwvquYTCERpqNaRtY5VFiFZmqlXeN5Lql69CjY2JU&_nc_zt=23&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=KVP6e8zxN-Ijei9RF1t1mA&_nc_ss=8&oh=00_AfxKCy3s99vpMaEnsS7QgVAoP-RCC_gpkLVT3TEwkmv1Xw&oe=69C12C0D"
+      },
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/04.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/616795822_2035631977387107_6908262110526005298_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=MwtxhgQO73AQ7kNvwEc-xVQ&_nc_oc=Ado7w7-KdQ3bAYk1s_2y3qLFFehkZ3ueKY8hDAq-yTlqD_ego3IMT-aCJROrsIF75is&_nc_zt=23&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=JMq4xQt0WuheeDieL_CqYA&_nc_ss=8&oh=00_Afxi3GRD8Ke2w1ZD3FYU587EwEigj0MgbTg_-iUHHrnoEA&oe=69C12CE4"
+      },
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/05.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/619425865_2035630700720568_5542854229930390041_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_ohc=3t1RVhgnpJQQ7kNvwGR2Fij&_nc_oc=AdpNQqFRyJ-Z6dn1CET49eLg39TxDe3op8xez6n5oDDMxML0CxznnfJKouecbgYtbZ0&_nc_zt=23&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=UuTzEht3MUrM-sdzUNlQLg&_nc_ss=8&oh=00_AfxrLeWaErn3pmbVZB-lTIIoFP0fWv3hMPk8wjZbwDIznw&oe=69C154F7"
+      },
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/06.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/617161433_2035630880720550_3734580006819144162_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7b2446&_nc_ohc=vzsmNBoaBBAQ7kNvwHVrjAf&_nc_oc=AdrBz3OLRBGLR0eVaPpmeMRhX8p5tIMl2yUkO6s4oxtaSva6vj-jP-wPtGtngwYAEmU&_nc_zt=23&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=lU__WTqxeZOM2iz23zXcWA&_nc_ss=8&oh=00_AfzhUDziIiVvRuIYxPpEqVK8DJbRV-qC0pAlWeXCaDqypw&oe=69C13A2B"
+      },
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/07.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/616615770_2035631120720526_2371387023811492484_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=7b2446&_nc_ohc=58x69gloaYUQ7kNvwFbOXyV&_nc_oc=AdqT-HHsmaFFpUfxKK3MZM3i2nHF6FGE8746EVHBoSFZIhHJ6I50V0oxbfWYxVrFudc&_nc_zt=23&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=thM8cZnZAzIfRac779XeCg&_nc_ss=8&oh=00_Afw6ToY8x-1_gD2pw9E54kir0lAQsDuzEHnrYtcXHKsWMg&oe=69C15635"
+      },
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/08.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/616958324_2035631470720491_4203725033117392088_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=7b2446&_nc_ohc=hNKL1KY231cQ7kNvwEAmJZm&_nc_oc=AdoJVQbrvqy_j_NNGRu2FgZQZGLfudsyC1vGYCXgrqzlzURfgEiJCdeK4nq7J6FF-Vw&_nc_zt=23&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=1pFCrwo2Ei6-K3DDkt6pVA&_nc_ss=8&oh=00_AfwsO2vkOTvgsk0IC4t8FxY8H1-WUOwSV2X_URUvPEmLCg&oe=69C129F6"
+      },
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/09.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/615826263_2035631800720458_7619367991735484841_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_ohc=yX9Ji4YLFi0Q7kNvwFj9563&_nc_oc=Adr5glzSiDd0vZxDER7-DCcCKvo0hwiD1eVHV5BUxcnaugVOjrKiCKN7JcSCrg9Z6Ew&_nc_zt=23&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=7gQQeZO_KVTKza9zYNO-Yg&_nc_ss=8&oh=00_AfxI_0cvjqe1VyxB2iF_0rHoW4uOscxjW11yA93Pj35ihA&oe=69C1302E"
+      },
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/10.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/617845557_2035632124053759_1566548123165723086_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=7b2446&_nc_ohc=5eZh0qmuBHQQ7kNvwEj7Kqm&_nc_oc=AdoYcvLvutiRjiwhAkmDYb-NbDU-MaPFB5hz3C_uO_0o_2-_Dvk6qGxf1gN_x9AYIQ4&_nc_zt=23&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=ameskH0FSfF-lT0kzz32pQ&_nc_ss=8&oh=00_AfwxzXLPJOb2_EkGNYDptjFdIHenza28z_wGWHQLU_6pBw&oe=69C148D3"
+      },
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/11.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/616575286_2035630804053891_225839191223112173_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=7b2446&_nc_ohc=nxL6y3eFsfsQ7kNvwGKZ8cB&_nc_oc=AdoEnD1-3glcd4C-jwzMu2-ACAMUsg_PdX_UswBXwd9xT4vXICD-A1MaCp7TWQAf3kQ&_nc_zt=23&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=KbW_fhMkdJrvxPRyQB7i8g&_nc_ss=8&oh=00_AfysLCBiFXmzECnY4rqB0H4yAApU2b5EPXKltZXqLZnNOA&oe=69C14099"
+      },
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/12.jpg",
+        "fileURL": "https://scontent.fdkr7-1.fna.fbcdn.net/v/t39.30808-6/616313194_2035630977387207_8271227152612022794_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=7b2446&_nc_ohc=mqZBS9RTzDgQ7kNvwFzbd28&_nc_oc=Adohc1cynBRuOu5mToXOwLWdsR612uvNB_4gnOWR-S6b38V3RHQh6AlWmXFYbsLrcZE&_nc_zt=23&_nc_ht=scontent.fdkr7-1.fna&_nc_gid=nYOsBmXFZWLtrQ0WyOEhag&_nc_ss=8&oh=00_AfzuOBNex8wfidP7EsqmzsljCeIyGI-ITPeOaYg_3F-wXA&oe=69C11F0E"
+      },
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/13.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/616028514_2035631250720513_3622747469043351665_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=NMn4--znzG0Q7kNvwGj1fHu&_nc_oc=AdruTJiR1onDKa7_TkbOZHlT5KO5tzMLOkOzKIqDrn6qog3YvA0eYIgo6_zEGaYZUKA&_nc_zt=23&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=iNjeqFiSL5oEKnGhN8qRZQ&_nc_ss=8&oh=00_AfwD62Vtoz440CXyukOUsrkAFUKuW1l1qw3gdMOEvtVsiA&oe=69C13E71"
+      },
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/14.jpg",
+        "fileURL": "https://scontent.fdkr6-1.fna.fbcdn.net/v/t39.30808-6/616569647_2035631560720482_2698995661917973945_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=7b2446&_nc_ohc=Sz4x1tI-B2oQ7kNvwFfT4NA&_nc_oc=AdohZZZ08wwQQ8n0_xyO_TtpnPPrTcFiW4gsdMaeq21t1joZBiDqAJujYsl2tpktaVg&_nc_zt=23&_nc_ht=scontent.fdkr6-1.fna&_nc_gid=ZRDoQlD2YcFDRbmCCFjyTQ&_nc_ss=8&oh=00_AfwWkDQkyqaoPMRUdoWKZkwfDM2GlGTKjroJRX2AUQsxNA&oe=69C123F5"
+      },
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/15.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/616173042_2035631874053784_4477804219713626034_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=7b2446&_nc_ohc=61bPuZG5F88Q7kNvwH3C7-5&_nc_oc=AdoxFBnAwCgdvMGFsiX_XyD6ADG53d9Yp0exFChFSo6rBCH6qnlheHyThGR-In9IoF0&_nc_zt=23&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=E-vkNuVLcttTJOzjmyZeFA&_nc_ss=8&oh=00_AfzlUckltfEbLJBvW8ZPB5JMnQXup-A1VvLpTgMRdLZ6gg&oe=69C12E26"
+      },
+      {
+        "filePATH": "raw/raw_fb_b194e7a3bdb5d0d4/16.jpg",
+        "fileURL": "https://scontent.fdkr5-1.fna.fbcdn.net/v/t39.30808-6/616801577_2035632290720409_1548544266572557786_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7b2446&_nc_ohc=eki_UhdjVW8Q7kNvwHAky4N&_nc_oc=AdpuFa2wnKI8cKgU5sUycLSiSS-fLueRvmvAljlm-_hEQoUGFNXhyNmpVqkF5RGwV00&_nc_zt=23&_nc_ht=scontent.fdkr5-1.fna&_nc_gid=uzWFmlyhxgaulgzjIgu5KQ&_nc_ss=8&oh=00_Afw3IXONdCPL6YHGW1IqkaMBhoxmacC47qAKORLPZvZi5w&oe=69C1454A"
+      }
+    ],
+    "nbrFloorApartment": 1,
+    "numeroApartment": "A-106",
+    "nbrRooms": 3,
+    "nbrBathrooms": 2,
+    "nbrToilets": 1,
+    "nbrKitchens": 1,
+    "nbrGarages": 1,
+    "sourceId": "raw_fb_b194e7a3bdb5d0d4",
+    "sourceText": "LOCATION D'UN CHIC APPARTEMENT DE 3 CHAMBRES AUX CHARBONNAGES PÉPINIÈRE\nTELS: 074801717/066176767\nDÉPLACEMENT: 5000F \nPRIX: 360000F\n#MODALITÉS \nLOYER+CAUTION+FRAIS \n#CARACTÉRISTIQUES \n3 CHAMBRES AVEC PLACARDS \n2 DOUCHES WC\n1 WC VISITEUR \n1 SALON\n1 CUISINE \n1 BUANDERIE + DÉBARRA\n1 ESPACE PARKING \nNB: EAU 3JRS/7JRS\nCLIENT SÉRIEUX APPELLE \n#NOTRE PRIORITÉ BIEN VOUS LOGER"
+  },
+  "imageCountLinked": 16,
+  "modelRejectReason": null,
+  "imageLinking": {
+    "linkedAt": "2026-03-20T04:09:16.630Z",
+    "rawPostPath": "/Users/glenneriss/Documents/projets/location-maison-scrap/storage/raw/posts/raw_fb_b194e7a3bdb5d0d4.json",
+    "totalRawImages": 16,
+    "successRawImages": 16,
+    "linkedCount": 16
+  }
+}
