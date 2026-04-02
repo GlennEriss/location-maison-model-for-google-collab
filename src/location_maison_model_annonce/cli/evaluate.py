@@ -69,8 +69,29 @@ def main() -> None:
         example_count=len(examples),
     )
     logger.info("Starting business evaluation for split=%s", args.split, extra={"split": args.split})
+    report_path = Path(config.paths.report_dir) / f"{args.split}_predictions.json"
+    partial_report_path = report_path.with_suffix(".partial.jsonl")
+    progress_state_path = report_path.with_suffix(".progress.json")
     try:
-        predictions = generate_predictions(examples, tokenizer, model, config.model_dump()["runtime"])
+        predictions = generate_predictions(
+            examples,
+            tokenizer,
+            model,
+            config.model_dump()["runtime"],
+            partial_output_path=partial_report_path,
+            progress_state_path=progress_state_path,
+            on_progress=lambda progress: write_run_state(
+                run_state_path,
+                status="evaluate_running",
+                split=args.split,
+                dataset_file=str(dataset_file),
+                example_count=len(examples),
+                report_file=str(report_path),
+                partial_report_file=str(partial_report_path),
+                progress_file=str(progress_state_path),
+                **progress,
+            ),
+        )
         metrics = compute_metrics(predictions)
     except Exception as exc:
         write_run_state(
@@ -79,14 +100,17 @@ def main() -> None:
             split=args.split,
             dataset_file=str(dataset_file),
             example_count=len(examples),
+            report_file=str(report_path),
+            partial_report_file=str(partial_report_path),
+            progress_file=str(progress_state_path),
             error_type=type(exc).__name__,
             error_message=str(exc),
         )
         raise
     output_path = Path(config.logging["metrics_file"])
     metrics.dump(output_path)
-    report_path = Path(config.paths.report_dir) / f"{args.split}_predictions.json"
     export_prediction_report(predictions, report_path)
+    cleanup_resume_artifacts(partial_report_path, progress_state_path)
     logger.info("Metrics written to %s", output_path)
     logger.info("Prediction report written to %s", report_path)
     logger.info(
@@ -105,6 +129,8 @@ def main() -> None:
         example_count=len(examples),
         metrics_file=str(output_path),
         report_file=str(report_path),
+        partial_report_file=str(partial_report_path),
+        progress_file=str(progress_state_path),
         json_valid_rate=metrics.json_valid_rate,
         type_accuracy=metrics.type_accuracy,
         status_accuracy=metrics.status_accuracy,
@@ -121,6 +147,12 @@ def write_run_state(path: Path, status: str, **payload: object) -> None:
         **payload,
     }
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def cleanup_resume_artifacts(*paths: Path) -> None:
+    for path in paths:
+        if path.exists():
+            path.unlink()
 
 
 if __name__ == "__main__":

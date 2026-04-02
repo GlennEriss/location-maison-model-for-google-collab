@@ -169,6 +169,9 @@ def main() -> None:
     metrics = export_training_metrics(Path(config.logging["metrics_file"]), train_output.metrics, eval_output)
 
     logger.info("Running business evaluation on test split")
+    report_path = Path(config.paths.report_dir) / "test_predictions.json"
+    partial_report_path = report_path.with_suffix(".partial.jsonl")
+    progress_state_path = report_path.with_suffix(".progress.json")
     write_run_state(
         run_state_path,
         status="evaluating_test",
@@ -185,6 +188,23 @@ def main() -> None:
         tokenizer,
         trainer.model,
         config.model_dump()["runtime"],
+        partial_output_path=partial_report_path,
+        progress_state_path=progress_state_path,
+        on_progress=lambda progress: write_run_state(
+            run_state_path,
+            status="evaluating_test",
+            checkpoint_mode=checkpoint_mode,
+            latest_checkpoint=str(find_latest_checkpoint(checkpoint_dir)) if find_latest_checkpoint(checkpoint_dir) else None,
+            adapter_checkpoint=adapter_checkpoint,
+            resume_checkpoint=resume_checkpoint,
+            train_loss=metrics.train_loss,
+            eval_loss=metrics.eval_loss,
+            perplexity=metrics.perplexity,
+            report_file=str(report_path),
+            partial_report_file=str(partial_report_path),
+            progress_file=str(progress_state_path),
+            **progress,
+        ),
     )
     business_metrics = compute_metrics(predictions)
     business_metrics.train_loss = metrics.train_loss
@@ -192,8 +212,8 @@ def main() -> None:
     business_metrics.perplexity = metrics.perplexity
     business_metrics.dump(Path(config.logging["metrics_file"]))
 
-    report_path = Path(config.paths.report_dir) / "test_predictions.json"
     export_prediction_report(predictions, report_path)
+    cleanup_resume_artifacts(partial_report_path, progress_state_path)
 
     logger.info("Metrics exported to %s", config.logging["metrics_file"])
     logger.info("Prediction report exported to %s", report_path)
@@ -216,6 +236,8 @@ def main() -> None:
         resume_checkpoint=resume_checkpoint,
         metrics_file=config.logging["metrics_file"],
         report_file=str(report_path),
+        partial_report_file=str(partial_report_path),
+        progress_file=str(progress_state_path),
         train_loss=business_metrics.train_loss,
         eval_loss=business_metrics.eval_loss,
         perplexity=business_metrics.perplexity,
@@ -264,6 +286,12 @@ def write_run_state(path: Path, status: str, **payload: object) -> None:
         **payload,
     }
     path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def cleanup_resume_artifacts(*paths: Path) -> None:
+    for path in paths:
+        if path.exists():
+            path.unlink()
 
 
 if __name__ == "__main__":

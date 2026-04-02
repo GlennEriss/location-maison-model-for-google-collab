@@ -4,7 +4,7 @@ import json
 import logging
 from pathlib import Path
 import time
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Callable, Dict, List, Optional, Tuple
 
 import torch
 from peft import PeftModel
@@ -126,6 +126,9 @@ def generate_predictions(
     model: Any,
     runtime_cfg: Dict[str, Any],
     max_new_tokens: int = 256,
+    partial_output_path: Optional[Path] = None,
+    progress_state_path: Optional[Path] = None,
+    on_progress: Optional[Callable[[Dict[str, Any]], None]] = None,
 ) -> List[Dict[str, Any]]:
     device = resolve_inference_device(model, runtime_cfg)
     predictions: List[Dict[str, Any]] = []
@@ -133,6 +136,26 @@ def generate_predictions(
     total_examples = len(examples)
     started_at = time.monotonic()
     log_every = 25 if total_examples >= 200 else 10
+    cached_predictions = load_partial_predictions(partial_output_path)
+    cached_predictions_by_id = {entry["example_id"]: entry for entry in cached_predictions}
+    completed_ids = {item["example_id"] for item in cached_predictions}
+    if cached_predictions:
+        predictions = [cached_predictions_by_id[item["example_id"]] for item in examples if item["example_id"] in cached_predictions_by_id]
+        logger.info(
+            "Resuming evaluation from %s cached predictions",
+            len(predictions),
+            extra={"completed_examples": len(predictions), "total_examples": total_examples},
+        )
+        if on_progress:
+            on_progress(
+                {
+                    "completed_examples": len(predictions),
+                    "total_examples": total_examples,
+                    "progress_pct": round((len(predictions) / total_examples) * 100, 2) if total_examples else 100.0,
+                    "last_example_id": predictions[-1]["example_id"] if predictions else None,
+                    "resumed_from_cache": True,
+                }
+            )
 
     logger.info(
         "Starting prediction generation on %s examples",
@@ -140,7 +163,14 @@ def generate_predictions(
         extra={"total_examples": total_examples, "device": str(device), "max_new_tokens": max_new_tokens},
     )
 
+    writer = None
+    if partial_output_path is not None:
+        partial_output_path.parent.mkdir(parents=True, exist_ok=True)
+        writer = partial_output_path.open("a", encoding="utf-8")
+
     for index, example in enumerate(examples, start=1):
+        if example["example_id"] in completed_ids:
+            continue
         prompt = build_prompt(example)
         inputs = tokenizer(prompt, return_tensors="pt")
         inputs = {key: value.to(device) for key, value in inputs.items()}
@@ -160,40 +190,102 @@ def generate_predictions(
         clean_generated_text = (
             json.dumps(parsed_json, ensure_ascii=False, sort_keys=True) if parsed_json is not None else generated_text
         )
-        predictions.append(
-            {
-                "example_id": example["example_id"],
-                "generated_text": clean_generated_text,
-                "predicted_json": parsed_json,
-                "target_json": example["target_json"],
-            }
-        )
+        prediction_record = {
+            "example_id": example["example_id"],
+            "generated_text": clean_generated_text,
+            "predicted_json": parsed_json,
+            "target_json": example["target_json"],
+        }
+        predictions.append(prediction_record)
+        if writer is not None:
+            writer.write(json.dumps(prediction_record, ensure_ascii=False) + "\n")
+            writer.flush()
 
-        if index % log_every == 0 or index == total_examples:
+        completed_count = len(predictions)
+
+        if progress_state_path is not None:
+            write_progress_state(
+                progress_state_path,
+                completed_examples=completed_count,
+                total_examples=total_examples,
+                last_example_id=example["example_id"],
+                partial_output_path=str(partial_output_path) if partial_output_path else None,
+            )
+
+        if completed_count % log_every == 0 or completed_count == total_examples:
             elapsed = max(time.monotonic() - started_at, 1e-6)
-            rate = index / elapsed
-            remaining = max(total_examples - index, 0)
+            rate = completed_count / elapsed
+            remaining = max(total_examples - completed_count, 0)
             eta_seconds = remaining / rate if rate else 0.0
+            progress_payload = {
+                "completed_examples": completed_count,
+                "total_examples": total_examples,
+                "progress_pct": round((completed_count / total_examples) * 100, 2) if total_examples else 100.0,
+                "elapsed_seconds": round(elapsed, 2),
+                "eta_seconds": round(eta_seconds, 2),
+                "examples_per_second": round(rate, 4),
+                "last_example_id": example["example_id"],
+            }
             logger.info(
                 "Prediction progress %s/%s (%.1f%%) elapsed=%s eta=%s rate=%.2f ex/s",
-                index,
+                completed_count,
                 total_examples,
-                (index / total_examples) * 100 if total_examples else 100.0,
+                (completed_count / total_examples) * 100 if total_examples else 100.0,
                 format_duration(elapsed),
                 format_duration(eta_seconds),
                 rate,
-                extra={
-                    "completed_examples": index,
-                    "total_examples": total_examples,
-                    "progress_pct": round((index / total_examples) * 100, 2) if total_examples else 100.0,
-                    "elapsed_seconds": round(elapsed, 2),
-                    "eta_seconds": round(eta_seconds, 2),
-                    "examples_per_second": round(rate, 4),
-                    "last_example_id": example["example_id"],
-                },
+                extra=progress_payload,
             )
+            if on_progress:
+                on_progress(progress_payload)
 
+    if writer is not None:
+        writer.close()
     return predictions
+
+
+def load_partial_predictions(partial_output_path: Optional[Path]) -> List[Dict[str, Any]]:
+    if partial_output_path is None or not partial_output_path.exists():
+        return []
+
+    predictions: List[Dict[str, Any]] = []
+    seen_ids: set[str] = set()
+    for line in partial_output_path.read_text(encoding="utf-8").splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            payload = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(payload, dict):
+            continue
+        example_id = payload.get("example_id")
+        if not isinstance(example_id, str) or example_id in seen_ids:
+            continue
+        predictions.append(payload)
+        seen_ids.add(example_id)
+    return predictions
+
+
+def write_progress_state(
+    progress_state_path: Path,
+    *,
+    completed_examples: int,
+    total_examples: int,
+    last_example_id: Optional[str],
+    partial_output_path: Optional[str],
+) -> None:
+    progress_state_path.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "updated_at": time.time(),
+        "completed_examples": completed_examples,
+        "total_examples": total_examples,
+        "progress_pct": round((completed_examples / total_examples) * 100, 2) if total_examples else 100.0,
+        "last_example_id": last_example_id,
+        "partial_output_path": partial_output_path,
+    }
+    progress_state_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def resolve_inference_device(model: Any, runtime_cfg: Dict[str, Any]) -> torch.device:
