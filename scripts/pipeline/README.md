@@ -26,6 +26,8 @@ Scripts:
   - pousse les artefacts locaux vers `outputs/` et `data/`
 - `pull_artifacts_from_drive.sh <drive_project_dir>`
   - recupere checkpoints, metrics, reports et datasets depuis Drive
+- `status_watch.sh <config_path> [interval_seconds]`
+  - affiche en boucle le contenu interprete de `RUN_STATE.json`
 
 Exemple:
 
@@ -34,4 +36,5 @@ cd /Users/glenneriss/Documents/projets/location-maison-model-for-google-collab
 ./scripts/pipeline/init_drive_layout.sh "/Users/glenneriss/Library/CloudStorage/GoogleDrive-xxx/My Drive/IA/location-maison-model-for-google-collab"
 ./scripts/pipeline/sync_code_to_drive.sh "/Users/glenneriss/Library/CloudStorage/GoogleDrive-xxx/My Drive/IA/location-maison-model-for-google-collab"
 ./scripts/pipeline/pull_artifacts_from_drive.sh "/Users/glenneriss/Library/CloudStorage/GoogleDrive-xxx/My Drive/IA/location-maison-model-for-google-collab"
+./scripts/pipeline/status_watch.sh config/project.yaml 15
 ```

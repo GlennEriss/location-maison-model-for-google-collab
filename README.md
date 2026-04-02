@@ -27,6 +27,7 @@ Scripts utiles:
 - `scripts/pipeline/sync_code_to_drive.sh`
 - `scripts/pipeline/push_artifacts_to_drive.sh`
 - `scripts/pipeline/pull_artifacts_from_drive.sh`
+- `scripts/pipeline/status_watch.sh`
 
 Notebooks:
 - `notebooks/colab_full_train_from_drive.ipynb`

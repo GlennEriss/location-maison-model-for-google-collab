@@ -110,7 +110,14 @@ def find_latest_checkpoint(checkpoint_dir: Path) -> Optional[Path]:
     candidates = [path for path in checkpoint_dir.iterdir() if path.is_dir() and path.name.startswith("checkpoint-")]
     if not candidates:
         return None
-    return sorted(candidates, key=lambda item: item.name)[-1]
+    return sorted(candidates, key=checkpoint_sort_key)[-1]
+
+
+def checkpoint_sort_key(path: Path) -> tuple[int, str]:
+    try:
+        return int(path.name.split("-")[-1]), path.name
+    except (TypeError, ValueError):
+        return -1, path.name
 
 
 def generate_predictions(

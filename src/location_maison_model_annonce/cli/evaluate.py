@@ -1,9 +1,11 @@
 from __future__ import annotations
 
 import argparse
+import json
 import logging
 from pathlib import Path
 from typing import Any, Dict, List
+from datetime import datetime, timezone
 
 from location_maison_model_annonce.core.config import load_config
 from location_maison_model_annonce.observability.logging import configure_logging
@@ -31,6 +33,7 @@ def build_parser() -> argparse.ArgumentParser:
 def main() -> None:
     args = build_parser().parse_args()
     config = load_config(args.config)
+    run_state_path = Path(config.paths.checkpoint_dir).parent / "RUN_STATE.json"
 
     log_dir = Path(config.paths.log_dir)
     configure_logging(
@@ -49,11 +52,37 @@ def main() -> None:
         dataset_file,
         extra={"split": args.split, "dataset_file": str(dataset_file), "example_count": len(examples)},
     )
+    write_run_state(
+        run_state_path,
+        status="evaluate_starting",
+        split=args.split,
+        dataset_file=str(dataset_file),
+        example_count=len(examples),
+    )
 
     tokenizer, model = load_model_for_evaluation(config.model_dump())
+    write_run_state(
+        run_state_path,
+        status="evaluate_running",
+        split=args.split,
+        dataset_file=str(dataset_file),
+        example_count=len(examples),
+    )
     logger.info("Starting business evaluation for split=%s", args.split, extra={"split": args.split})
-    predictions = generate_predictions(examples, tokenizer, model, config.model_dump()["runtime"])
-    metrics = compute_metrics(predictions)
+    try:
+        predictions = generate_predictions(examples, tokenizer, model, config.model_dump()["runtime"])
+        metrics = compute_metrics(predictions)
+    except Exception as exc:
+        write_run_state(
+            run_state_path,
+            status="evaluate_failed",
+            split=args.split,
+            dataset_file=str(dataset_file),
+            example_count=len(examples),
+            error_type=type(exc).__name__,
+            error_message=str(exc),
+        )
+        raise
     output_path = Path(config.logging["metrics_file"])
     metrics.dump(output_path)
     report_path = Path(config.paths.report_dir) / f"{args.split}_predictions.json"
@@ -68,6 +97,30 @@ def main() -> None:
         metrics.tags_f1,
         metrics.numeric_exact_match,
     )
+    write_run_state(
+        run_state_path,
+        status="evaluate_completed",
+        split=args.split,
+        dataset_file=str(dataset_file),
+        example_count=len(examples),
+        metrics_file=str(output_path),
+        report_file=str(report_path),
+        json_valid_rate=metrics.json_valid_rate,
+        type_accuracy=metrics.type_accuracy,
+        status_accuracy=metrics.status_accuracy,
+        tags_f1=metrics.tags_f1,
+        numeric_exact_match=metrics.numeric_exact_match,
+        evaluated_examples=metrics.evaluated_examples,
+    )
+
+def write_run_state(path: Path, status: str, **payload: object) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    state = {
+        "updated_at": datetime.now(timezone.utc).isoformat(),
+        "status": status,
+        **payload,
+    }
+    path.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 if __name__ == "__main__":
