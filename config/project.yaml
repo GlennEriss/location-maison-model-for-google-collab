@@ -80,4 +80,6 @@ runtime:
   device_preference: cuda
   allow_cpu_fallback: true
   num_workers: 8
+  cpu_num_threads: 4
+  cpu_eval_max_new_tokens: 96
   fail_fast: true

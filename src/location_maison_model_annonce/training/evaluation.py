@@ -131,6 +131,7 @@ def generate_predictions(
     on_progress: Optional[Callable[[Dict[str, Any]], None]] = None,
 ) -> List[Dict[str, Any]]:
     device = resolve_inference_device(model, runtime_cfg)
+    effective_max_new_tokens = resolve_generation_max_new_tokens(device, runtime_cfg, max_new_tokens)
     predictions: List[Dict[str, Any]] = []
     logger = logging.getLogger("evaluate.progress")
     total_examples = len(examples)
@@ -140,18 +141,30 @@ def generate_predictions(
     cached_predictions_by_id = {entry["example_id"]: entry for entry in cached_predictions}
     completed_ids = {item["example_id"] for item in cached_predictions}
     if cached_predictions:
+        resumed_count = len(cached_predictions)
+        remaining_count = max(total_examples - resumed_count, 0)
         predictions = [cached_predictions_by_id[item["example_id"]] for item in examples if item["example_id"] in cached_predictions_by_id]
         logger.info(
-            "Resuming evaluation from %s cached predictions",
-            len(predictions),
-            extra={"completed_examples": len(predictions), "total_examples": total_examples},
+            "Resume detected: %s/%s predictions already cached, %s remaining",
+            resumed_count,
+            total_examples,
+            remaining_count,
+            extra={
+                "completed_examples": resumed_count,
+                "total_examples": total_examples,
+                "remaining_examples": remaining_count,
+                "progress_pct": round((resumed_count / total_examples) * 100, 2) if total_examples else 100.0,
+                "last_example_id": predictions[-1]["example_id"] if predictions else None,
+                "resumed_from_cache": True,
+            },
         )
         if on_progress:
             on_progress(
                 {
-                    "completed_examples": len(predictions),
+                    "completed_examples": resumed_count,
                     "total_examples": total_examples,
-                    "progress_pct": round((len(predictions) / total_examples) * 100, 2) if total_examples else 100.0,
+                    "remaining_examples": remaining_count,
+                    "progress_pct": round((resumed_count / total_examples) * 100, 2) if total_examples else 100.0,
                     "last_example_id": predictions[-1]["example_id"] if predictions else None,
                     "resumed_from_cache": True,
                 }
@@ -160,7 +173,12 @@ def generate_predictions(
     logger.info(
         "Starting prediction generation on %s examples",
         total_examples,
-        extra={"total_examples": total_examples, "device": str(device), "max_new_tokens": max_new_tokens},
+        extra={
+            "total_examples": total_examples,
+            "device": str(device),
+            "max_new_tokens": effective_max_new_tokens,
+            "requested_max_new_tokens": max_new_tokens,
+        },
     )
 
     writer = None
@@ -178,7 +196,7 @@ def generate_predictions(
         with torch.no_grad():
             output = model.generate(
                 **inputs,
-                max_new_tokens=max_new_tokens,
+                max_new_tokens=effective_max_new_tokens,
                 do_sample=False,
                 pad_token_id=tokenizer.pad_token_id,
                 eos_token_id=tokenizer.eos_token_id,
@@ -298,6 +316,15 @@ def resolve_inference_device(model: Any, runtime_cfg: Dict[str, Any]) -> torch.d
         return next(model.parameters()).device
     except StopIteration:
         return torch.device("cpu")
+
+
+def resolve_generation_max_new_tokens(device: torch.device, runtime_cfg: Dict[str, Any], requested: int) -> int:
+    if device.type != "cpu":
+        return requested
+    cpu_limit = int(runtime_cfg.get("cpu_eval_max_new_tokens") or 0)
+    if cpu_limit <= 0:
+        cpu_limit = 96
+    return min(requested, cpu_limit)
 
 
 def format_duration(seconds: float) -> str:

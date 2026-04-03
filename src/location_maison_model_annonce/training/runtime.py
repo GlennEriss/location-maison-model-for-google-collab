@@ -34,6 +34,7 @@ def resolve_runtime(model_cfg: Dict[str, Any], runtime_cfg: Dict[str, Any]) -> T
     mps_available = torch.backends.mps.is_available()
     use_mps = bool(mps_requested and mps_available)
     device_map = None
+    target_device = "cuda" if use_cuda else "mps" if use_mps else "cpu"
     torch_dtype = torch.float16 if (use_mps or use_cuda) else torch.float32
 
     if use_mps:
@@ -53,7 +54,8 @@ def resolve_runtime(model_cfg: Dict[str, Any], runtime_cfg: Dict[str, Any]) -> T
     if quantization != "none":
         logger.warning("Quantization '%s' is ignored on this local runtime; loading standard weights instead.", quantization)
 
-    target_device = "cuda" if use_cuda else "mps" if use_mps else "cpu"
+    if target_device == "cpu":
+        configure_cpu_runtime(runtime_cfg, logger)
     logger.info("Loading model %s with dtype=%s on %s", model_source, torch_dtype, target_device)
     model = AutoModelForCausalLM.from_pretrained(
         model_source,
@@ -61,6 +63,7 @@ def resolve_runtime(model_cfg: Dict[str, Any], runtime_cfg: Dict[str, Any]) -> T
         torch_dtype=torch_dtype,
         device_map=device_map,
         local_files_only=local_files_only,
+        low_cpu_mem_usage=(target_device == "cpu"),
     )
 
     if use_cuda:
@@ -69,6 +72,22 @@ def resolve_runtime(model_cfg: Dict[str, Any], runtime_cfg: Dict[str, Any]) -> T
         model.to("mps")
 
     return tokenizer, model
+
+
+def configure_cpu_runtime(runtime_cfg: Dict[str, Any], logger: logging.Logger) -> None:
+    cpu_threads = int(runtime_cfg.get("cpu_num_threads") or 0)
+    if cpu_threads <= 0:
+        cpu_count = os.cpu_count() or 1
+        cpu_threads = max(min(cpu_count, 4), 1)
+
+    torch.set_num_threads(cpu_threads)
+    interop_threads = max(min(cpu_threads // 2, 2), 1)
+    torch.set_num_interop_threads(interop_threads)
+    logger.info(
+        "CPU/RAM fallback enabled with num_threads=%s interop_threads=%s. This mode is much slower than GPU but keeps the pipeline runnable.",
+        cpu_threads,
+        interop_threads,
+    )
 
 
 def configure_mps_memory_budget(runtime_cfg: Dict[str, Any], logger: logging.Logger) -> None:
