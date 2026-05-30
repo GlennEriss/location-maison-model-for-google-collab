@@ -19,6 +19,7 @@ from location_maison_model_annonce.training.callbacks import MetricsFileCallback
 from location_maison_model_annonce.training.data import build_training_prompt
 from location_maison_model_annonce.training.lora import build_lora_config
 from location_maison_model_annonce.training.metrics import TrainingMetrics
+from location_maison_model_annonce.training.runtime import choose_runtime_device
 
 
 def tokenize_dataset(dataset: DatasetDict, tokenizer: Any, max_length: int) -> DatasetDict:
@@ -62,9 +63,10 @@ def build_trainer(
     model.print_trainable_parameters()
 
     tokenized = tokenize_dataset(dataset, tokenizer, int(training_cfg["max_seq_length"]))
-    use_cuda_fp16 = bool(str(training_cfg.get("mixed_precision", "")).lower() == "fp16" and torch.cuda.is_available())
-    use_cuda = torch.cuda.is_available()
-    use_mps = bool(config["runtime"].get("device_preference") == "mps" and torch.backends.mps.is_available())
+    target_device = choose_runtime_device(str(config["runtime"].get("device_preference", "auto")).lower(), logger)
+    use_cuda = target_device == "cuda"
+    use_mps = target_device == "mps"
+    use_cuda_fp16 = bool(str(training_cfg.get("mixed_precision", "")).lower() == "fp16" and use_cuda)
     use_cpu_fallback = not use_cuda and not use_mps
     train_dataset_size = max(len(tokenized["train"]), 1)
     effective_batch_size = max(

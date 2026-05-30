@@ -26,44 +26,32 @@ def resolve_runtime(model_cfg: Dict[str, Any], runtime_cfg: Dict[str, Any]) -> T
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
-    preferred_device = str(runtime_cfg.get("device_preference", "cpu")).lower()
-    cuda_requested = preferred_device == "cuda"
-    mps_requested = preferred_device == "mps"
-    use_cuda = bool(cuda_requested and torch.cuda.is_available())
-    mps_built = torch.backends.mps.is_built()
-    mps_available = torch.backends.mps.is_available()
-    use_mps = bool(mps_requested and mps_available)
+    preferred_device = str(runtime_cfg.get("device_preference", "auto")).lower()
+    target_device = choose_runtime_device(preferred_device, logger)
+    use_cuda = target_device == "cuda"
+    use_mps = target_device == "mps"
     device_map = None
-    target_device = "cuda" if use_cuda else "mps" if use_mps else "cpu"
     torch_dtype = torch.float16 if (use_mps or use_cuda) else torch.float32
 
     if use_mps:
         configure_mps_memory_budget(runtime_cfg, logger)
-    elif cuda_requested and not use_cuda:
-        logger.warning("CUDA was requested but is unavailable; falling back to CPU.")
-
-    if mps_requested and mps_built and not mps_available:
-        logger.warning(
-            "MPS is built into torch but unavailable at runtime. On this Mac, recreating the venv with "
-            "/opt/homebrew/bin/python3.13 is the recommended next step."
-        )
-    elif mps_requested and not mps_built:
-        logger.warning("Torch was installed without MPS support; training will use CPU.")
+    elif target_device == "cpu":
+        configure_cpu_runtime(runtime_cfg, logger)
 
     quantization = str(model_cfg.get("quantization", "none")).lower()
     if quantization != "none":
         logger.warning("Quantization '%s' is ignored on this local runtime; loading standard weights instead.", quantization)
 
-    if target_device == "cpu":
-        configure_cpu_runtime(runtime_cfg, logger)
+    if use_cuda:
+        configure_cuda_runtime(logger)
     logger.info("Loading model %s with dtype=%s on %s", model_source, torch_dtype, target_device)
     model = AutoModelForCausalLM.from_pretrained(
         model_source,
         trust_remote_code=bool(model_cfg.get("trust_remote_code", False)),
-        torch_dtype=torch_dtype,
+        dtype=torch_dtype,
         device_map=device_map,
         local_files_only=local_files_only,
-        low_cpu_mem_usage=(target_device == "cpu"),
+        low_cpu_mem_usage=True,
     )
 
     if use_cuda:
@@ -72,6 +60,38 @@ def resolve_runtime(model_cfg: Dict[str, Any], runtime_cfg: Dict[str, Any]) -> T
         model.to("mps")
 
     return tokenizer, model
+
+
+def choose_runtime_device(preferred_device: str, logger: logging.Logger) -> str:
+    mps_built = torch.backends.mps.is_built()
+    mps_available = torch.backends.mps.is_available()
+
+    if preferred_device in {"auto", "cuda"}:
+        if torch.cuda.is_available():
+            return "cuda"
+        if preferred_device == "cuda":
+            logger.warning("CUDA was requested but is unavailable; falling back to CPU.")
+
+    if preferred_device in {"auto", "mps"}:
+        if mps_available:
+            return "mps"
+        if preferred_device == "mps" and mps_built and not mps_available:
+            logger.warning(
+                "MPS is built into torch but unavailable at runtime. On this Mac, recreating the venv with "
+                "/opt/homebrew/bin/python3.13 is the recommended next step."
+            )
+        elif preferred_device == "mps" and not mps_built:
+            logger.warning("Torch was installed without MPS support; falling back to CPU.")
+
+    return "cpu"
+
+
+def configure_cuda_runtime(logger: logging.Logger) -> None:
+    if hasattr(torch.backends, "cuda"):
+        torch.backends.cuda.matmul.allow_tf32 = True
+    if hasattr(torch, "set_float32_matmul_precision"):
+        torch.set_float32_matmul_precision("high")
+    logger.info("CUDA runtime optimizations enabled (tf32/high matmul precision where supported).")
 
 
 def configure_cpu_runtime(runtime_cfg: Dict[str, Any], logger: logging.Logger) -> None:

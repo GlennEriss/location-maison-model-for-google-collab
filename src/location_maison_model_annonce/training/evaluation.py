@@ -3,15 +3,17 @@ from __future__ import annotations
 import json
 import logging
 from pathlib import Path
+import re
 import time
 from typing import Any, Callable, Dict, List, Optional, Tuple
+import unicodedata
 
 import torch
 from peft import PeftModel
 
 from location_maison_model_annonce.training.data import build_prompt
 from location_maison_model_annonce.training.metrics import TrainingMetrics
-from location_maison_model_annonce.training.runtime import resolve_runtime
+from location_maison_model_annonce.training.runtime import choose_runtime_device, resolve_runtime
 
 ALLOWED_TAGS = {
     "Travail",
@@ -86,6 +88,56 @@ NUMERIC_FIELDS = [
     "nbrFloorStudio",
     "nbrToilet",
 ]
+
+CANONICAL_FIELDS = {
+    "typeProperty",
+    "area",
+    "price",
+    "tags",
+    "status",
+    "contact",
+    "nbrRooms",
+    "nbrKitchens",
+    "nbrBathrooms",
+    "nbrToilets",
+    "nbrFloorApartment",
+    "numeroApartment",
+    "nbrApartments",
+    "nbrFloors",
+    "hasParking",
+    "nbrGarages",
+    "nbrLivingRoom",
+    "nbrFloorStudio",
+    "numeroStudio",
+    "nbrPiscine",
+    "kioskType",
+    "roomType",
+}
+
+TAG_EVIDENCE_PATTERNS = {
+    "Agence": [r"\bagence\b", r"\bcommission\b", r"\bfrais d[' ]agence\b"],
+    "Propriétaire": [r"\bproprietaire\b", r"\bproprio\b"],
+    "Sécurisé": [r"\bsecuri", r"\bgrille", r"\bbarriere\b", r"\bgardien\b"],
+    "Parking": [r"\bparking\b", r"\bgarage\b"],
+    "Garage": [r"\bgarage\b"],
+    "Centre-ville": [r"\bcentre[\s-]?ville\b"],
+    "Balcon": [r"\bbalcon\b"],
+    "Terrasse": [r"\bterrasse\b"],
+    "Boutique": [r"\bboutique\b", r"\bcommerce\b"],
+    "Duplex": [r"\bduplex\b"],
+    "Villa": [r"\bvilla\b"],
+    "Piscine": [r"\bpiscine\b"],
+    "Meublé": [r"\bmeuble\b"],
+    "Sous barrière": [r"\bsous barriere\b", r"\bbarriere\b"],
+    "Wi-Fi": [r"\bwifi\b", r"\bwi fi\b"],
+    "Transport proche": [r"\btransport\b", r"\btaxi\b", r"\bechangeur\b", r"\bcarrefour\b"],
+    "Commerces proches": [r"\bcommerce", r"\bmarche\b", r"\bboutique\b"],
+    "Court séjour": [r"\bcourt sejour\b", r"\bnuit", r"\bjournee\b"],
+    "Collocation": [r"\bcollocation\b", r"\bcolocation\b"],
+    "Couple": [r"\bcouple\b"],
+    "Famille": [r"\bfamille\b", r"\bfamilial\b"],
+    "Étudiant": [r"\betudiant\b"],
+}
 
 
 def load_model_for_evaluation(config: Dict[str, Any]) -> Tuple[Any, Any]:
@@ -204,7 +256,7 @@ def generate_predictions(
 
         generated_ids = output[0][inputs["input_ids"].shape[1]:]
         generated_text = tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
-        parsed_json = normalize_prediction(try_parse_json(generated_text))
+        parsed_json = normalize_prediction(try_parse_json(generated_text), example.get("description", ""))
         clean_generated_text = (
             json.dumps(parsed_json, ensure_ascii=False, sort_keys=True) if parsed_json is not None else generated_text
         )
@@ -307,11 +359,10 @@ def write_progress_state(
 
 
 def resolve_inference_device(model: Any, runtime_cfg: Dict[str, Any]) -> torch.device:
-    preferred = str(runtime_cfg.get("device_preference", "cpu")).lower()
-    if preferred == "cuda" and torch.cuda.is_available():
-        return torch.device("cuda")
-    if preferred == "mps" and torch.backends.mps.is_available():
-        return torch.device("mps")
+    preferred = str(runtime_cfg.get("device_preference", "auto")).lower()
+    resolved = choose_runtime_device(preferred, logging.getLogger("evaluate.runtime"))
+    if resolved in {"cuda", "mps"}:
+        return torch.device(resolved)
     try:
         return next(model.parameters()).device
     except StopIteration:
@@ -352,22 +403,35 @@ def try_parse_json(text: str) -> Optional[Dict[str, Any]]:
     return payload if isinstance(payload, dict) else None
 
 
-def normalize_prediction(payload: Optional[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+def normalize_prediction(payload: Optional[Dict[str, Any]], description: str = "") -> Optional[Dict[str, Any]]:
     if payload is None:
         return None
 
-    normalized = dict(payload)
+    normalized = {key: value for key, value in dict(payload).items() if key in CANONICAL_FIELDS or key == "nbrToilet"}
     type_property = normalized.get("typeProperty")
     if isinstance(type_property, str):
         normalized["typeProperty"] = TYPE_ALIASES.get(type_property, type_property)
 
+    if normalized.get("nbrToilets") is None and normalized.get("nbrToilet") is not None:
+        normalized["nbrToilets"] = normalized.get("nbrToilet")
+    normalized.pop("nbrToilet", None)
+
     tags = normalized.get("tags")
     if isinstance(tags, list):
         filtered_tags: List[str] = []
+        normalized_description = normalize_text(description)
         for tag in tags:
-            if isinstance(tag, str) and tag in ALLOWED_TAGS and tag not in filtered_tags:
+            if (
+                isinstance(tag, str)
+                and tag in ALLOWED_TAGS
+                and tag not in filtered_tags
+                and tag_has_evidence(tag, normalized_description)
+            ):
                 filtered_tags.append(tag)
         normalized["tags"] = filtered_tags
+
+    inferred_type = infer_room_vs_studio(normalized.get("typeProperty"), description, normalized)
+    normalized["typeProperty"] = inferred_type
 
     if normalized.get("typeProperty") == "Studio":
         normalized["nbrRooms"] = 1
@@ -376,12 +440,43 @@ def normalize_prediction(payload: Optional[Dict[str, Any]]) -> Optional[Dict[str
     if normalized.get("typeProperty") == "Room":
         normalized["nbrRooms"] = 1
         normalized["nbrKitchens"] = None
-        normalized["nbrBathrooms"] = None
-        normalized["nbrToilets"] = None
         normalized["nbrFloorStudio"] = None
         normalized["numeroStudio"] = None
+        normalized["nbrFloorApartment"] = None
+        normalized["numeroApartment"] = None
+
+    if normalized.get("typeProperty") != "Shop":
+        normalized["nbrToilet"] = None
+    normalized.pop("nbrToilet", None)
 
     return normalized
+
+
+def infer_room_vs_studio(type_property: Any, description: str, payload: Dict[str, Any]) -> Any:
+    if not isinstance(type_property, str):
+        return type_property
+    normalized_description = normalize_text(description)
+    if type_property == "Studio":
+        mentions_studio = bool(re.search(r"\bstudio\b", normalized_description))
+        mentions_room = bool(re.search(r"\bgrande chambre\b|\bchambre a louer\b|\bchambre\b", normalized_description))
+        mentions_kitchen = bool(re.search(r"\bcuisine\b|\bcoin cuisine\b", normalized_description))
+        if not mentions_studio and mentions_room and not mentions_kitchen:
+            return "Room"
+    if type_property == "Room" and re.search(r"\bstudio\b", normalized_description):
+        return "Studio"
+    return type_property
+
+
+def normalize_text(text: str) -> str:
+    ascii_text = unicodedata.normalize("NFKD", text or "").encode("ascii", "ignore").decode("ascii")
+    return ascii_text.lower()
+
+
+def tag_has_evidence(tag: str, normalized_description: str) -> bool:
+    patterns = TAG_EVIDENCE_PATTERNS.get(tag)
+    if not patterns:
+        return True
+    return any(re.search(pattern, normalized_description) for pattern in patterns)
 
 
 def compute_metrics(predictions: List[Dict[str, Any]]) -> TrainingMetrics:
